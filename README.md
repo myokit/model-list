@@ -119,7 +119,7 @@ Base: [Noble 1962](#1962-noble-mpf)
 
 Known as: McAllister-Noble-Tsien (MNT)
 
-## Beeler 1977 mVf
+## 1977 Beeler mVf
 Base: [McAllister 1975](#1975-mcallister-hpf)
 | [In Myokit repo](https://github.com/myokit/models/blob/main/c/beeler-1977.mmt)
 | [Paper](https://doi.org/10.1113/jphysiol.1977.sp011853) Beeler, Reuter (1977) Reconstruction of the action potential of ventricular myocardial fibres
