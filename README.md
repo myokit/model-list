@@ -206,7 +206,7 @@ Base: [Rasmusson 1990a](#1990a-rasmusson-fs)
 
 ## 1991 Luo GV
 Base: [Beeler 1977](#1977-beeler-mvf)
-| [*Updated* Matlab code](https://rudylab.wustl.edu/code-downloads/)
+| [Updated matlab code](https://rudylab.wustl.edu/code-downloads/)
 | [Paper](https://doi.org/10.1161/01.res.68.6.1501) Luo, Rudy (1991) A model of the ventricular cardiac action potential. Depolarization, repolarization, and their interaction.
 
 Known as: Luo-Rudy model, LR1, Luo-Rudy phase 1 model
@@ -342,7 +342,7 @@ Novelties:
 
 ## 2000 Faber GV
 Base: [Viswanathan 1999](#1999-viswanathan-gv)
-| [Original code](https://rudylab.wustl.edu/code-downloads/)
+| [Original C++ code](https://rudylab.wustl.edu/code-downloads/)
 | [Paper](https://doi.org/10.1016/s0006-3495(00)76783-x) Faber, Rudy (2000) Action Potential and Contractility in [Na+]i Overloaded Cardiac Myocytes
 
 ## 2000 Greenstein CV
@@ -417,7 +417,7 @@ Base: [Luo 1994](#1994-luo-gv)
 
 ## 2003 Matsuoka GV
 Base: [Luo 1991](#1991-luo-gv), but lots of new things
-| [Original code](https://web.archive.org/web/20070819084149/http://www.card.med.kyoto-u.ac.jp/simulation/)
+| [Original Delphi code](https://web.archive.org/web/20070819084149/http://www.card.med.kyoto-u.ac.jp/simulation/)
 | [Reimplementation in simBio](http://www.sim-bio.org/model/index.html#Kyoto+model)
 | [Paper](https://doi.org/10.2170/jjphysiol.53.105) Matsuoka, Sarai et al., Noma (2003) Role of individual ionic current systems in ventricular cells hypothesized by a model study
 
@@ -434,12 +434,12 @@ Base: [Pandit 2001](#2001-pandit-lv)
 
 ## 2003 Sarai mS
 Base: [Matsuoka 2003](#2003-matsuoka-mV)
-| [Original code (archived)](https://web.archive.org/web/20070819084149/http://www.card.med.kyoto-u.ac.jp/simulation/)
+| [Original Delphi code](https://web.archive.org/web/20070819084149/http://www.card.med.kyoto-u.ac.jp/simulation/)
 | [Reimplementation in simBio](http://www.sim-bio.org/model/index.html#Kyoto+model)
 | [Paper](https://doi.org/10.2170/jjphysiol.53.125) Sarai, Matsuoka et al., Noma (2003) Role of individual ionic current systems in the SA node hypothesized by a model study
 
 Based mostly on Rabbit and Guinea pig data.
-The C++ code for this model is the same as that for Matsuoka 2003, but it has a mode switch.
+The Delphi and C++ code for this model is the same as that for Matsuoka 2003, but it has a mode switch.
 
 ## 2003 Saucerman LV
 Base: [Puglisi 2001](#2001-puglisi-gv)
@@ -471,7 +471,7 @@ Base: [Luo 1994](#1994-luo-gv), but many new formulations
 
 ## 2004 Hund CV
 Base: [Hund 2001](#2001-hund-gv) (arguably, most of the formulations are new, but the supplement is written in a way that strongly suggests this model was based on LRd2).
-| [*Updated* code](https://rudylab.wustl.edu/code-downloads/)
+| [Updated matlab and C++ code](https://rudylab.wustl.edu/code-downloads/)
 | [Paper](https://doi.org/10.1161/01.cir.0000147231.69595.d3) Hund, Rudy (2004) Rate Dependence and Regulation of Action Potential and Calcium Transient in a Canine Cardiac Ventricular Cell Model
 
 Known as: HRd
@@ -516,8 +516,8 @@ Base: [Puglisi 2001](#2001-puglisi-gv)
 
 ## 2004 Shannon RV
 Base: [Puglisi 2001](#2001-puglisi-gv)
-| [Archived original code](https://web.archive.org/web/20060425184747/http://www.luhs.org/depts/physio/personal_pages/bers_d/index.html)
-| [Grandi's matlab code](https://github.com/drgrandilab/Shannon-et-al-2004-Rabbit-Ventricular-Model)
+| [Original C code](https://web.archive.org/web/20060425184747/http://www.luhs.org/depts/physio/personal_pages/bers_d/index.html)
+| [Grandi's matlab](https://github.com/drgrandilab/Shannon-et-al-2004-Rabbit-Ventricular-Model)
 | [Paper](https://doi.org/10.1529/biophysj.104.047449) Shannon, Wang et al., Bers (2004) A mathematical treatment of integrated Ca dynamics within the ventricular myocyte
 
 Known as: Chicago model
@@ -620,7 +620,7 @@ Modifications:
 
 ## 2007 Faber GV
 Base: [Hund 2001](#2001-hund-gv)
-|[Original code](https://rudylab.wustl.edu/code-downloads/)
+|[Original matlab and C++ code](https://rudylab.wustl.edu/code-downloads/)
 | [Paper](https://doi.org/10.1529/biophysj.106.088807) Faber, Silva, Livshitz, Rudy (2007) Kinetic Properties of the Cardiac L-Type Ca Channel and Its Role in Myocyte Electrophysiology; A Theoretical Investigation
 
 Known as: Faber-Rudy
@@ -644,7 +644,7 @@ Modifications:
 
 ## 2007 Livshitz CV
 Base: [Hund 2004](#2004-hund-cv)
-| [Original code](https://rudylab.wustl.edu/code-downloads/)
+| [Original matlab code](https://rudylab.wustl.edu/code-downloads/)
 | [In Myokit repo](https://github.com/myokit/models/blob/main/c/livshitz-2007.mmt)
 | [Paper](https://doi.org/10.1152/ajpheart.01347.2006) Livshitz, Rudy (2007) Regulation of Ca and electrical alternans in cardiac myocytes; role of CAMKII and repolarizing currents
 
@@ -687,7 +687,7 @@ Base: [Sarai 2003](#2003-sarai-ms), [Kuzumoto 2007](#2007-kuzumoto-gv)
 
 ## 2008 Hund CV
 Base: [Livshitz 2007](#2007-livshitz-cv)
-| [Original code?](https://rudylab.wustl.edu/code-downloads/)
+| [Original C++ code](https://rudylab.wustl.edu/code-downloads/)
 
 ## 2008 Korhonen Md
 Base: [Dokos 1996](#1996-dokos-rs), [Bondarenko 2004](#2004-bondarenko-mv)
@@ -742,7 +742,7 @@ Base: [Benson 2008](#2008-benson-cv)
 
 ## 2009 Decker CV
 Base: [Hund 2008](#2008-hund-cv)
-| [Original code](https://rudylab.wustl.edu/code-downloads/)
+| [Original matlab and C++ code](https://rudylab.wustl.edu/code-downloads/)
 | [In Myokit repo](https://github.com/myokit/models/blob/main/c/decker-2009.mmt)
 | [Paper](https://doi.org/10.1152/ajpheart.01216.2008) Decker, Heijman et al., Rudy (2009) Properties and ionic mechanisms of action potential adaptation, restitution, and accommodation in canine epicardium
 
@@ -764,12 +764,12 @@ Base: [Bondarenko 2004](#2004-bondarenko-mv)
 
 ## 2009 Livshitz GV
 Base: [Faber 2007](#2007-faber-gv)
-| [Original code](https://rudylab.wustl.edu/code-downloads/)
+| [Original matlab code](https://rudylab.wustl.edu/code-downloads/)
 | [Paper](https://doi.org/10.1016/j.bpj.2009.05.062) Livshitz, Rudy (2009) Uniqueness and Stability of Action Potential Models during Rest, Pacing, and Conduction Using Problem-Solving Environment
 
 ## 2009 Livshitz CV
 Base: [Hund 2004](#2004-hund-cv)
-| [Original code](https://rudylab.wustl.edu/code-downloads/)
+| [Original matlab code](https://rudylab.wustl.edu/code-downloads/)
 | [Paper](https://doi.org/10.1016/j.bpj.2009.05.062) Livshitz, Rudy (2009) Uniqueness and Stability of Action Potential Models during Rest, Pacing, and Conduction Using Problem-Solving Environment
 
 ## 2009 Maleckar HA
@@ -782,7 +782,7 @@ Base: [Kurata 2002](#2002-kurata-rs), [Shannon 2004](#2004-shannon-rv)
 
 ## 2009 Stewart HP
 Base: [Ten Tusscher 2006](#2006-ten-tusscher-hv)
-| [Original CellML](https://models.cellml.org/workspace/stewart_aslanidi_noble_noble_boyett_zhang_2009)
+| [Original CellML code](https://models.cellml.org/workspace/stewart_aslanidi_noble_noble_boyett_zhang_2009)
 | [In Myokit repo](https://github.com/myokit/models/blob/main/c/stewart-2009.mmt)
 | [Paper](https://doi.org/10.1098/rsta.2008.0283) Stewart, Aslanidi et al., Zhang (2009) Mathematical model of the electrical action potential of Purkinje fibre cells
 
@@ -819,7 +819,7 @@ Base: [Maltsev 2009](#2009-maltsev-rs)
 
 ## 2010 Sampson HP
 Base: [Iyer 2004](#2004-iyer-hv)
-| Original code in supplement
+| [Original fortran code](https://physoc.onlinelibrary.wiley.com/doi/suppl/10.1113/jphysiol.2010.187328#support-information-section)
 | [In Myokit repo](https://github.com/myokit/models/blob/main/c/sampson-2010.mmt)
 | [Paper](https://doi.org/10.1113/jphysiol.2010.187328) Sampson, Iyer, Marks, Kass (2010). A computational model of Purkinje fibre single cell electrophysiology: implications for the long QT syndrome
 
@@ -866,7 +866,7 @@ Base: [Nygren 1998](#1998-nygren-ha)
 
 ## 2011 Li CP
 Base: [Decker 2009](#2009-decker-cv)
-| [Original c++ code](https://rudylab.wustl.edu/code-downloads/)
+| [Original C++ code](https://rudylab.wustl.edu/code-downloads/)
 | [Paper](https://doi.org/10.1161/CIRCRESAHA.111.246512) Li, Rudy (2011) A model of canine purkinje cell electrophysiology and Ca2 cycling; rate dependence, triggered activity, and comparison to ventricular myocytes
 
 Known as: PRd
@@ -897,7 +897,7 @@ Base: [Mangoni 2006](#2006-mangoni-ms)
 
 ## 2012 Davies CV
 Base: [Benson 2008](#2008-benson-cv)
-| Original matlab code provided in supplement
+| [Original matlab code](https://journals.physiology.org/doi/suppl/10.1152/ajpheart.00808.2011)
 | [Paper](https://doi.org/10.1152/ajpheart.00808.2011) Davies, Mistry et al., Abi-gerges (2012) An in silico canine cardiac midmyocardial action potential duration model as a tool for early drug safety assessment
 
 ## 2012 Morotti RV
@@ -924,7 +924,7 @@ Base: [Maltsev 2010](#2010-maltsev-rs)
 
 ## 2012 Yang HV
 Base: [O'Hara 2011](#2011-ohara-hv)
-| [*Updated* code](https://github.com/drgrandilab/Fogli-Iseppe-et-al-2021-TdP-prediction)
+| [Updated C++ code](https://github.com/drgrandilab/Fogli-Iseppe-et-al-2021-TdP-prediction)
 | [Paper](https://doi.org/10.3389/fphys.2012.00360) Yang, Clancy (2012) In silico Prediction of Sex-Based Differences in Human Susceptibility to Cardiac Ventricular Tachyarrhythmias
 
 ## 2012 Yang MV
@@ -994,9 +994,9 @@ Base: [Yang 2012 mouse](#2012-yang-mv)
 
 ## 2015 Himeno HV
 Base: [Asakura 2014](#2014-asakura-hv)
-| [Original visual basic code (HuVECII)](http://www.eheartsim.com/?wpdmdl=280)
-| [Official C code](http://www.eheartsim.com/?wpdmdl=442)
-| [Updated visual basic code (HuVECIII, 2017)](http://www.eheartsim.com/?wpdmdl=500)
+| [Original (HuVECII) visual basic code](http://www.eheartsim.com/?wpdmdl=280)
+| [Official C](http://www.eheartsim.com/?wpdmdl=442)
+| [Updated (HuVECIII, 2017) visual basic](http://www.eheartsim.com/?wpdmdl=500)
 | [Paper](https://doi.org/10.1016/j.bpj.2015.06.017) Himeno, Asakura et al., Noma (2015) A human ventricular myocyte model with a refined representation of excitation-contraction coupling
 
 Known as: HuVEC, or HuVECII
@@ -1154,13 +1154,13 @@ Known as: TPA
 
 ## 2018 Colman HA
 Base: [Courtemanche 1998](#1998-courtemanche-ha), [Nygren 1998](#1998-nygren-ha), [Chang 2014](#2014-chang-ha)
-| [Original code](https://github.com/michaelcolman/hAM_WL)
+| [Original C++ code](https://github.com/michaelcolman/hAM_WL)
 | [Paper](https://doi.org/10.3389/fphys.2018.01211) Colman, Saxena, Kettlewell, Workman (2018) Description of the Human Atrial Action Potential Derived From a Single, Congruent Data Source; Novel Computational Models for Integrated Experimental-Numerical Study of Atrial Arrhythmia Mechanisms
 
 ## 2018 Koivumaki Hi
 Base: [Korhonen 2010](#2010-korhonen-md), [Paci 2015](#2015-paci-hi)
-| [Paper]()
-Koivumaki, Naumenko et al., Tavi (2018) Structural Immaturity of Human iPSC-Derived Cardiomyocytes; In Silico Investigation of Effects on Function and Disease Modeling
+| [Original matlab code](https://www.researchgate.net/publication/323308198_hiPSC-CM_model)
+| [Paper](https://doi.org/10.3389/fphys.2018.00080) Koivumaki, Naumenko et al., Tavi (2018) Structural Immaturity of Human iPSC-Derived Cardiomyocytes; In Silico Investigation of Effects on Function and Disease Modeling
 
 ## 2018 Paci Hi
 Base: [Paci 2017](#2017-paci-hi)
@@ -1263,7 +1263,7 @@ Base: [Yang 2012](#2012-yang-hv)
 
 ## 2021 Gaur PV
 Base: [O'Hara 2011](#2011-ohara-hv), but many new parts
-| Official openCARP, Myokit, and CellML code is provided in the supplement
+| [Original openCARP code](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009137#sec022) and official Myokit, and CellML code
 | [Paper](https://doi.org/10.1371/journal.pcbi.1009137) Gaur, Qi et al., Vigmond (2021) A computational model of pig ventricular cardiomyocyte electrophysiology and calcium handling; Translation from pig to human electrophysiology
 
 ## 2021 Hoekstra HS
