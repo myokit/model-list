@@ -32,6 +32,10 @@ Model names / nicknames (e.g. LR1) are provided separately under "known as".
 **Preparation**
 - f recordings in fibres or other multicellular preparations, instead of isolated cells
 
+**Base**
+A tentative "base" model is indicated.
+This can be a clear ancestor - with many equations and parameters inherited - but also a more vague "inspiration".
+
 **Code**
 Where possible, indicate whether code is
 - "Original": used by the authors when writing the publication
