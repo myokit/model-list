@@ -52,6 +52,7 @@ Some papers with model lists or model comparison:
 - [Amuzescu, Airini et al., Radu (2021) Evolution of mathematical models of cardiomyocyte electrophysiology](https://doi.org/10.1016/j.mbs.2021.108567)
 - [Wilders (2007) Computer modelling of the sinoatrial node](https://doi.org/10.1007/s11517-006-0127-0)
 - [Ricci, Bartolucci, Severi (2022) The virtual sinoatrial node: What did computational models tell us about cardiac pacemaking?](https://doi.org/10.1016/j.pbiomolbio.2022.10.008)
+
 Online model lists:
 - [InSilicoCardiotox  Human Action Potential Models Repository](https://www.cs.ox.ac.uk/insilicocardiotox/model-repository)
 - [Physiome model repository category "Electrophysiology"](https://models.physiomeproject.org/electrophysiology)
