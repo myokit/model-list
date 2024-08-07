@@ -267,7 +267,7 @@ Modifications:
 - ...
 
 ## 1996a Dokos RS
-Base: [Noble 1998](#1989-noble-ms), [Wilders 1991](#1991-wilders-ms)
+Base: [Noble 1989](#1989-noble-ms), [Wilders 1991](#1991-wilders-ms)
 | [Paper](https://doi.org/10.1006/jtbi.1996.0129) Dokos, Celler, Lovell (1996) Ion Currents Underlying Sinoatrial Node Pacemaker Activity; A New Single Cell Mathematical Model
 
 ## 1996b Dokos RS
@@ -1299,6 +1299,9 @@ Modifications:
 Base: [Tomek 2020](#2020-tomek-hv), [Heijman 2011](#2011-heijman-cv)
 | [Original matlab code](https://github.com/rdoste/ToR-ORd-BARS)
 | [Paper](https://doi.org/10.1016/j.yjmcc.2022.08.361) Doste, Coppini, Bueno-Orovio (2022) Remodelling of potassium currents underlies arrhythmic action potential prolongation under beta-adrenergic stimulation in hypertrophic cardiomyopathy
+
+Modifications:
+- Added beta-adrenergic signalling
 
 ## 2022 Kohjitani Hi
 Base: [Himeno 2015](#2015-himeno-hv)
