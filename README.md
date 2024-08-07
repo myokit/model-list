@@ -1126,7 +1126,7 @@ Base: [Severi 2012](#2012-severi-rs)
 
 Known as: FWS
 
-## 2017 Li 2017 HV
+## 2017 Li HV
 Base: [O'Hara 2011](#2011-ohara-hv)
 | [Paper](https://doi.org/10.1161/CIRCEP.116.004628) Li, Dutta et al., Colatsky (2017) Improving the in silico assessment of proarrhythmia risk by combining hERG channel-drug binding kinetics and multichannel pharmacology
 Known as: IKr-dynamic ORd model, original IKr-dyn ORd model
