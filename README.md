@@ -827,7 +827,7 @@ Base: [Bondarenko 2004](#2004-bondarenko-mv)
 Base: [Maltsev 2009](#2009-maltsev-rs)
 | [Paper](https://doi.org/10.1152/ajpheart.00783.2009) Maltsev, Lakatta (2010) A novel quantitative explanation for the autonomic modulation of cardiac pacemaker cell automaticity via a dynamic system of sarcolemmal and intracellular proteins
 
-## 2010 Sampson HP
+## 2010 Sampson-Iyer HP
 Base: [Iyer 2004](#2004-iyer-hv)
 | [Original fortran code](https://physoc.onlinelibrary.wiley.com/doi/suppl/10.1113/jphysiol.2010.187328#support-information-section)
 | [In Myokit repo](https://github.com/myokit/models/blob/main/c/sampson-2010.mmt)
