@@ -1194,7 +1194,7 @@ Base: [Paci 2017](#2017-paci-hi)
 | [In Myokit repo](https://github.com/myokit/models/blob/main/c/paci-2018.mmt)
 | [Paper](https://doi.org/10.3389/fphys.2018.00709) Paci, Polonen et al., Hyttinen (2018) Automatic optimization of an in silico model of human iPSC derived cardiomyocytes recapitulating calcium handling abnormalities
 
-## Loewe 2019 HS
+## 2019 Loewe HS
 Base: [Fabbri 2017](#2017-fabbri-hs)
 | [Official CellML](https://models.physiomeproject.org/workspace/58f)
 | [Paper](https://doi.org/10.1016/j.bpj.2019.07.037) Loewe, Lutz et al., Severi (2019) Hypocalcemia-Induced Slowing of Human Sinus Node Pacemaking
