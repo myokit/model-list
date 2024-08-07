@@ -545,6 +545,8 @@ Base: [Puglisi 2001](#2001-puglisi-gv)
 Base: [Puglisi 2001](#2001-puglisi-gv)
 | [Original C code](https://web.archive.org/web/20060425184747/http://www.luhs.org/depts/physio/personal_pages/bers_d/index.html)
 | [Grandi's matlab](https://github.com/drgrandilab/Shannon-et-al-2004-Rabbit-Ventricular-Model)
+| [Another matlab](https://somapp.ucdmc.ucdavis.edu/pharmacology/bers/)
+| [Fink's CellML](http://models.cellml.org/exposure/d72a36fe0b7e121068c96bcb1ff6044a/shannon_wang_puglisi_weber_bers_2004_a.cellml/view)
 | [Paper](https://doi.org/10.1529/biophysj.104.047449) Shannon, Wang et al., Bers (2004) A mathematical treatment of integrated Ca dynamics within the ventricular myocyte
 
 Known as: Chicago model
@@ -1074,8 +1076,8 @@ Base: [Grandi 2011](#2011-grandi-pandit-voigt-ha)
 | [Original matlab code](https://github.com/drgrandilab/Morotti-et-al-2016-Human-Atrial-Model-with-Updated-INa)
 | [Paper](https://doi.org/10.1016/j.yjmcc.2015.07.030) Morotti, McCulloch et al., Grandi (2016) Atrial-selective targeting of arrhythmogenic phase-3 earlyafterdepolarizations in human myocytes
 
-Bits:
- - Na modified from Grandi 2007, and (not included): Wagner 2009 & Moreno 2013
+Modifications:
+- Markov model of INa with drug block adapted from Grandi 2007 and Wagner 2009 & Moreno 2013
 
 ## 2016 Passini HV
 Base: [O'Hara 2011](#2011-ohara-hv)
@@ -1132,9 +1134,8 @@ Base: [Morotti 2016](#2016-morotti-ha)
 | [Original matlab code](https://github.com/drgrandilab/Ellinwood-et-al-2017-Human-Atrial-Model-with-Updated-IKur)
 | [Paper](https://doi.org/10.1063/1.5000226) Ellinwood, Dobrev, Morotti, Grandi (2017) Revealing kinetics and state-dependent binding properties of IKur-targeting drugs that maximize atrial fibrillation selectivity [Erratum](https://doi.org/10.1063/1.5007051)
 
-Bits:
-- IKur adapted from 
-Zhou et al. (PLoS ONE 2012; e42295)
+Modifications:
+- Markov model of IKur with drug block adapted from Zhou et al. (PLoS ONE 2012; e42295)
 
 ## 2017 Fabbri HS
 Base: [Severi 2012](#2012-severi-rs)
