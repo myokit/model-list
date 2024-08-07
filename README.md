@@ -54,7 +54,7 @@ A number of software packages are referenced, because they contain models.
 Some experimented with re-use of model code, making the models difficult to extract.
 - Oxsoft Heart (1984-1999) was a DOS program released by Denis Noble and his group, and contained Noble-group models in that period. It was succeded by COR (and then OpenCOR) and CellML. The Oxsoft models were all converted to CellML.
 - LabHEART (2001-2022) was a Windows program built around Bers et al. models. It is archived at https://web.archive.org/web/20220615151709/http://www.labheart.org/
-- simBio (2005-2008) was a Windows program released by Sarai et al., and contained the "Kyoto model" family. It can still be downloaded from https://sourceforge.net/projects/simbio/files/simBio. It was succeded (I think) by e-Heart (http://www.eheartsim.com).
+- simBio (2005-2008) was a Windows program released by Sarai et al., and contained the "Kyoto model" family. It can still be downloaded from https://sourceforge.net/projects/simbio/files/simBio. It was succeded (I think) by e-Heart.
 - e-Heart (2014-present) is a Windows (visual basic) program released by Noma's group(?) it can be downloaded from http://www.eheartsim.com.
 
 ### Not included in the main list
