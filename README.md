@@ -6,6 +6,7 @@ Specifically, detailed models (not reduced or propagation focussed) without stoc
 ### Key
 Models are listed as year, followed by first author (or multiple if shared first authorship).
 Model names / nicknames (e.g. LR1) are provided separately under "known as".
+Ordering is year, then first author alphabetically.
 
 **Type**
 - A Atrial
@@ -110,7 +111,7 @@ Krause, Antoni, Fleckenstein (1966) An electronic model for the formation of loc
 
 Note: In german. Can't find it online
 
-## 1975 McAllister HPf
+## 1975 McAllister mPf
 Base: [Noble 1962](#1962-noble-mpf)
 | [Paper](https://doi.org/10.1113/jphysiol.1975.sp011080) McAllister, Noble, Tsien (1975) Reconstruction of the electrical activity of cardiac Purkinje fibres
 
@@ -1058,7 +1059,7 @@ Bits:
 
 ## 2016 Passini HV
 Base: [O'Hara 2011](#2011-ohara-hv)
-[Paper](https://doi.org/10.1016/j.yjmcc.2015.09.003) Passini, Minchole et al. Bueno-Orovio (2016 ) Mechanisms of Pro-Arrhythmic Abnormalities in Ventricular Repolarisation and Anti-Arrhythmic Therapies in Human Hypertrophic Cardiomyopathy
+| [Paper](https://doi.org/10.1016/j.yjmcc.2015.09.003) Passini, Minchole et al. Bueno-Orovio (2016 ) Mechanisms of Pro-Arrhythmic Abnormalities in Ventricular Repolarisation and Anti-Arrhythmic Therapies in Human Hypertrophic Cardiomyopathy
 
 Modifications:
 - Rescaled Ito
@@ -1077,7 +1078,7 @@ Base: [Ramirez 2000](#2000-ramirez-ca)
 
 ## 2017 Aguilar HA
 Base: [Courtemanche 1998](#1998-courtemanche-ha)
-| [Paper](https://doi.org/) Aguilar, Feng et al., Nattel (2017) Rate-dependent role of IKur in human atrial repolarization and atrial fibrillation maintenance
+| [Paper](https://doi.org/10.1016/j.bpj.2017.03.022) Aguilar, Feng et al., Nattel (2017) Rate-dependent role of IKur in human atrial repolarization and atrial fibrillation maintenance
 
 ## 2017 Bartos RV
 Base: [Negroni 2015](#2015-negroni-rv)
