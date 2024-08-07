@@ -33,6 +33,10 @@ Ordering is year, then first author alphabetically.
 **Preparation**
 - f recordings in fibres or other multicellular preparations, instead of isolated cells
 
+**Base**
+A tentative "base" model is indicated.
+This can be a clear ancestor - with many equations and parameters inherited - but also a more vague "inspiration".
+
 **Code**
 Where possible, indicate whether code is
 - "Original": used by the authors when writing the publication
@@ -42,7 +46,6 @@ Where possible, indicate whether code is
 ### Inclusion criteria
 Models are included if they represent the dynamics of a single cell or, for early models, of a small, space-clamped, multicellular preparation.
 Models are omitted if they contain spatial propagation, either in larger tissues or by dividing the cell into a multitude of "calcium release units".
-(The above holds only for this overview file. The repository on the whole contains models of other cell types, models of single currents, and more.)
 
 Whether or not a modification counts as a "model" is entirely subjective.
 No strict criteria are used here, just try to make it useful.
@@ -53,12 +56,12 @@ Some papers with model lists or model comparison:
 - [Amuzescu, Airini et al., Radu (2021) Evolution of mathematical models of cardiomyocyte electrophysiology](https://doi.org/10.1016/j.mbs.2021.108567)
 - [Wilders (2007) Computer modelling of the sinoatrial node](https://doi.org/10.1007/s11517-006-0127-0)
 - [Ricci, Bartolucci, Severi (2022) The virtual sinoatrial node: What did computational models tell us about cardiac pacemaking?](https://doi.org/10.1016/j.pbiomolbio.2022.10.008)
+
 Online model lists:
 - [InSilicoCardiotox  Human Action Potential Models Repository](https://www.cs.ox.ac.uk/insilicocardiotox/model-repository)
 - [Physiome model repository category "Electrophysiology"](https://models.physiomeproject.org/electrophysiology)
 
 A number of software packages are referenced, because they contain models.
-Some experimented with re-use of model code, making the models difficult to extract.
 - Oxsoft Heart (1984-1999) was a DOS program released by Denis Noble and his group, and contained Noble-group models in that period. It was succeded by COR (and then OpenCOR) and CellML. The Oxsoft models were all converted to CellML.
 - LabHEART (2001-2022) was a Windows program built around Bers et al. models. It is archived at https://web.archive.org/web/20220615151709/http://www.labheart.org/
 - simBio (2005-2008) was a Windows program released by Sarai et al., and contained the "Kyoto model" family. It can still be downloaded from https://sourceforge.net/projects/simbio/files/simBio. It was succeded (I think) by e-Heart.
@@ -117,7 +120,7 @@ Base: [Noble 1962](#1962-noble-mpf)
 
 Known as: McAllister-Noble-Tsien (MNT)
 
-## Beeler 1977 mVf
+## 1977 Beeler mVf
 Base: [McAllister 1975](#1975-mcallister-hpf)
 | [In Myokit repo](https://github.com/myokit/models/blob/main/c/beeler-1977.mmt)
 | [Paper](https://doi.org/10.1113/jphysiol.1977.sp011853) Beeler, Reuter (1977) Reconstruction of the action potential of ventricular myocardial fibres
@@ -1124,7 +1127,7 @@ Base: [Severi 2012](#2012-severi-rs)
 
 Known as: FWS
 
-## 2017 Li 2017 HV
+## 2017 Li HV
 Base: [O'Hara 2011](#2011-ohara-hv)
 | [Paper](https://doi.org/10.1161/CIRCEP.116.004628) Li, Dutta et al., Colatsky (2017) Improving the in silico assessment of proarrhythmia risk by combining hERG channel-drug binding kinetics and multichannel pharmacology
 Known as: IKr-dynamic ORd model, original IKr-dyn ORd model
