@@ -45,7 +45,6 @@ Where possible, indicate whether code is
 ### Inclusion criteria
 Models are included if they represent the dynamics of a single cell or, for early models, of a small, space-clamped, multicellular preparation.
 Models are omitted if they contain spatial propagation, either in larger tissues or by dividing the cell into a multitude of "calcium release units".
-(The above holds only for this overview file. The repository on the whole contains models of other cell types, models of single currents, and more.)
 
 Whether or not a modification counts as a "model" is entirely subjective.
 No strict criteria are used here, just try to make it useful.
