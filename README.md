@@ -4,6 +4,9 @@ This is a list of published action potential models.
 Specifically, detailed models (not reduced or propagation focussed) without stochastics (no release units).
 
 ### Key
+Models are listed as year, followed by first author (or multiple if shared first authorship).
+Model names / nicknames (e.g. LR1) are provided separately under "known as".
+
 **Type**
 - A Atrial
 - V Ventricular
@@ -30,7 +33,7 @@ Specifically, detailed models (not reduced or propagation focussed) without stoc
 - f recordings in fibres or other multicellular preparations, instead of isolated cells
 
 **Code**
-I've tried to indicate whether code is
+Where possible, indicate whether code is
 - "Original": used by the authors when writing the publication
 - "Official": an author-sanctioned translation to code, e.g. a CellML created during publishing
 - "Updated": created by authors or others, with slight modifications or fixes to original code
@@ -41,7 +44,7 @@ Models are omitted if they contain spatial propagation, either in larger tissues
 (The above holds only for this overview file. The repository on the whole contains models of other cell types, models of single currents, and more.)
 
 Whether or not a modification counts as a "model" is entirely subjective.
-No strict criteria are used here, I just tried to make it useful.
+No strict criteria are used here, just try to make it useful.
 
 ### Sources
 Some papers with model lists or model comparison:
@@ -49,6 +52,9 @@ Some papers with model lists or model comparison:
 - [Amuzescu, Airini et al., Radu (2021) Evolution of mathematical models of cardiomyocyte electrophysiology](https://doi.org/10.1016/j.mbs.2021.108567)
 - [Wilders (2007) Computer modelling of the sinoatrial node](https://doi.org/10.1007/s11517-006-0127-0)
 - [Ricci, Bartolucci, Severi (2022) The virtual sinoatrial node: What did computational models tell us about cardiac pacemaking?](https://doi.org/10.1016/j.pbiomolbio.2022.10.008)
+Online model lists:
+- [InSilicoCardiotox  Human Action Potential Models Repository](https://www.cs.ox.ac.uk/insilicocardiotox/model-repository)
+- [Physiome model repository category "Electrophysiology"](https://models.physiomeproject.org/electrophysiology)
 
 A number of software packages are referenced, because they contain models.
 Some experimented with re-use of model code, making the models difficult to extract.
