@@ -55,6 +55,7 @@ Some papers with model lists or model comparison:
 - [Noble, Garny, Noble (2012) How the Hodgkin-Huxley equations inspired the Cardiac Physiome Project](https://doi.org/10.1113/jphysiol.2011.224238)
 - [Amuzescu, Airini et al., Radu (2021) Evolution of mathematical models of cardiomyocyte electrophysiology](https://doi.org/10.1016/j.mbs.2021.108567)
 - [Wilders (2007) Computer modelling of the sinoatrial node](https://doi.org/10.1007/s11517-006-0127-0)
+- [Davies, Wang et al., Polonchuk (2016) Recent developments in using mechanistic cardiac modelling for drug safety evaluation](https://doi.org/10.1016/j.drudis.2016.02.003)
 - [Ricci, Bartolucci, Severi (2022) The virtual sinoatrial node: What did computational models tell us about cardiac pacemaking?](https://doi.org/10.1016/j.pbiomolbio.2022.10.008)
 
 Online model lists:
@@ -88,6 +89,7 @@ Some reductions and propagation models:
 - Ten Tusscher 2006b reduces Ten Tusscher 2006
 - Bueno-Orovio 2008 adds an equation to Fenton 1998
 - Tran 2009 reduces Luo 1991
+- Aslanidi 2012 applied the Courtemanche and Nygren models on realistic anatomy
 - Balakrishnan 2015 develop a reduced whole heart model
 - Gray & Pathmanathan 2016 create a minimal but fully parametrisable AP model
 - Corrado 2017, Carrado & Niederer 2016, Corrado 2018
@@ -187,7 +189,8 @@ Base: [DiFrancesco 1985](#1985-difrancesco-mpf)
 Chapter: Murphey, Clark (1987) Parasympathetic control of the SA node cell in rabbit heart; a model. In: Activation, Metabolism and Perfusion of the Heart, eds Sideman, Beyar
 
 ## 1989 Noble mS
-Chapter: "DiFrancesco, Noble, Denyer (1989) Ionic Mechanisms in Normal and Abnormal Cardiac Pacemaker Activity", in "Jacklet (Ed, 1989) Neuronal and Cellular Oscillators".
+Base: [Noble 1984](#1984-noble-mSf)
+| Chapter: "DiFrancesco, Noble, Denyer (1989) Ionic Mechanisms in Normal and Abnormal Cardiac Pacemaker Activity", in "Jacklet (Ed, 1989) Neuronal and Cellular Oscillators".
 
 Known as: Noble-DiFrancesco-Denyer
 
@@ -323,6 +326,13 @@ Base: [Zeng 1995](#1995-zeng-gv)
 Modifications:
 - New calcium handling
 
+## 1999 Clancy GV
+Base: [Zeng 1995](#1995-zeng-gv)
+| [Paper](https://doi.org/10.1038/23034) Clancy, Rudy (1999) Linking a genetic defect to its cellular phenotype in a cardiac arrhythmia
+
+Modifications:
+- New (baseline and mutated) INa model
+
 ## 1999 Demir RS
 Base: [Demir 1994](#1994-demir-rs)
 | [Paper](https://doi.org/10.1152/ajpheart.1999.276.6.H2221) Demir, Clark, Giles (1999) Parasympathetic modulation of sinoatrial node pacemaker activity in rabbit heart; a unifying model
@@ -408,6 +418,13 @@ Known as: Puglisi-Bers, LabHEART
 Modifications:
 - Rescaled gK1
 - ... see Table 1
+
+## 2002 Clancy GV
+Base: [Clancy 1999](#1999-clancy-gv), [Viswanathan 1999](#1999-viswanathan-gv) 
+| [Paper](https://doi.org/10.1038/23034) Clancy, Rudy (1999) Linking a genetic defect to its cellular phenotype in a cardiac arrhythmia
+
+Modifications:
+- New (baseline and mutated) INa model
 
 ## 2002 Fox CV
 Base: [Chudin 1999](#1999-chudin-gv)
@@ -537,7 +554,7 @@ Modifications:
 - ...
 
 ## 2004 Ten Tusscher HV
-Base: Bit of LR2. Not sure!
+Base: Mostly new
 | [In Myokit repo](https://github.com/myokit/models/blob/main/c/tentusscher-2004.mmt)
 | [Paper](https://doi.org/10.1152/ajpheart.00794.2003) Ten Tusscher, Noble, Noble, Panfilov (2004) A Model for Human Ventricular Tissue
 
