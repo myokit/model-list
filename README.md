@@ -1298,10 +1298,36 @@ Base: [O'Hara 2011](#2011-ohara-hv), but many new parts
 Base: [Fabbri 2017](#2017-fabbri-hs)
 | [Paper](https://doi.org/10.1016/j.pbiomolbio.2021.05.006) Hoekstra, van Ginneken, Wilders, Verkerk (2021) HCN4 current during human sinoatrial node-like action potentials
 
+## Morotti 2021 HV
+Base: [Grandi 2010](#2010-grandi-hv)
+| [Original code](https://github.com/drgrandilab/Morotti-et-al-2021-Cross-species-translators-of-electrophysiological-response)
+| [Paper](https://www.science.org/doi/10.1126/sciadv.abg0927) Morotti, Liu et al., Grandi (2024) Quantitative cross-species translators of cardiac myocyte electrophysiology; Model training, experimental validation, and applications
+
+Modifications:
+- Included (and adapted) PKA and CaMKII signaling from Soltis-Saucerman
+
 ## 2021 Morotti MS
 Base: [Kharche 2011](#2011-kharche-ms)
 | [Original matlab code](https://github.com/drgrandilab/Morotti-et-al-2021-mouse-sinoatrial-model)
 | [Paper](https://doi.org/10.3390/ijms22115645) Morotti, Ni et al., Grandi (2021) Intracellular Na+ Modulates Pacemaking Activity in Murine Sinoatrial Node Myocytes: An In Silico Analysis
+
+## 2021 Morotti MV
+Base: [Surdo 2017](#2017-surdo-mv) 
+| [Original code](https://github.com/drgrandilab/Morotti-et-al-2021-Cross-species-translators-of-electrophysiological-response)
+| [Paper](https://www.science.org/doi/10.1126/sciadv.abg0927) Morotti, Liu et al., Grandi (2024) Quantitative cross-species translators of cardiac myocyte electrophysiology; Model training, experimental validation, and applications
+
+Modifications:
+- Updated PKA signaling
+- Improved implementation of ODE calculation
+
+## Morotti 2021 RV
+Base: [Bartos 2017](#2017-bartos-rv)
+| [Original code](https://github.com/drgrandilab/Morotti-et-al-2021-Cross-species-translators-of-electrophysiological-response)
+| [Paper](https://www.science.org/doi/10.1126/sciadv.abg0927) Morotti, Liu et al., Grandi (2024) Quantitative cross-species translators of cardiac myocyte electrophysiology; Model training, experimental validation, and applications
+
+Modifications:
+- Updated PKA signaling
+- Improved implementation of ODE calculation
 
 ## 2022 Bartolucci HV
 Base: [Bartoluci 2020](#2020-bartolucci-hv)
