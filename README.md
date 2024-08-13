@@ -803,6 +803,7 @@ Base: [Hund 2004](#2004-hund-cv)
 
 ## 2009 Maleckar HA
 Base: [Nygren 1998](#1998-nygren-ha)
+| [In Myokit repo](https://github.com/myokit/models/blob/main/c/maleckar-2009.mmt)
 | [Paper](https://doi.org/10.1152/ajpheart.00411.2009) Maleckar, Greenstein, Giles, Trayanova (2009) K current changes account for the rate dependence of the action potential in the human atrial myocyte
 
 ## 2009 Maltsev RS
@@ -1132,6 +1133,7 @@ Modifications:
 ## 2017 Ellinwood HA
 Base: [Morotti 2016](#2016-morotti-ha)
 | [Original matlab code](https://github.com/drgrandilab/Ellinwood-et-al-2017-Human-Atrial-Model-with-Updated-IKur)
+| [In Myokit repo](https://github.com/myokit/models/blob/main/c/ellinwood-2017.mmt)
 | [Paper](https://doi.org/10.1063/1.5000226) Ellinwood, Dobrev, Morotti, Grandi (2017) Revealing kinetics and state-dependent binding properties of IKur-targeting drugs that maximize atrial fibrillation selectivity [Erratum](https://doi.org/10.1063/1.5007051)
 
 Modifications:
