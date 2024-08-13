@@ -996,6 +996,8 @@ Base: [Grandi 2010](#2010-grandi-hv), CaRU reduction used by [Greenstein 2006](#
 
 Known as: HuVECI (this terminology starts with Himeno 2015)
 
+Note: This and subsequent huvec models use an iterative procedure to implement calcium buffering, which makes it difficult to replicate in modelling frameworks.
+
 Modifications:
 - Contraction from Negroni and Lascano, 2008
 - Hinch 2004 approximation for LCC-RyR coupling
