@@ -556,7 +556,8 @@ Modifications:
 - ...
 
 ## 2004 Ten Tusscher HV
-Base: Mostly new
+Base: Mostly new?
+| [Original code](https://tbb.bio.uu.nl/khwjtuss/SourceCodes/HVM)
 | [In Myokit repo](https://github.com/myokit/models/blob/main/c/tentusscher-2004.mmt)
 | [Paper](https://doi.org/10.1152/ajpheart.00794.2003) Ten Tusscher, Noble, Noble, Panfilov (2004) A Model for Human Ventricular Tissue
 
@@ -617,6 +618,7 @@ Base: [Fox 2002](#2002-fox-cv)
 
 ## 2006 Ten Tusscher HV
 Base: [Ten Tusscher 2004](#2004-ten-tusscher-hv)
+| [Original code](https://tbb.bio.uu.nl/khwjtuss/SourceCodes/HVM2)
 | [In Myokit repo](https://github.com/myokit/models/blob/main/c/tentusscher-2006.mmt)
 | [Paper](https://doi.org/10.1152/ajpheart.00109.2006) Ten Tusscher, Panfilov (2006) Alternans and spiral breakup in a human ventricular tissue model
 
@@ -1005,6 +1007,13 @@ Modifications:
 - IK1 from Ishihara & Yan 2007 and Yan & Ishihara 2005
 - ...
 
+## 2014 Bondarenko MV
+Base: [Bondarenko 2004](#2004-bondarenko-mv)
+| [Paper](https://doi.org/10.1371/journal.pone.0089113) Bondarenko (2014) A compartmentalized mathematical model of the beta1-adrenergic signaling system in mouse ventricular myocytes
+
+Modifications:
+- Adds extensive beta1-adrenergic signalling
+
 ## 2014 Chang HA
 Base: [Grandi 2011](#2011-grandi-pandit-voigt-ha)
 | [Original OpenCARP code](https://doi.org/10.6084/m9.figshare.1201512)
@@ -1218,6 +1227,14 @@ Base: [O'Hara 2011](#2011-ohara-hv)
 Base: [Tao 2011](#2011-tao-ls)
 | [Paper](https://doi.org/10.3389/fphys.2020.546508) Alghamdi, Boyett, Hancox, Zhang (2020) Cardiac pacemaker dysfunction arising from different studies of ion channel remodeling in the aging rat heart
 
+## 2020 Asfaw MA
+Base: [Bondarenko 2014](#2014-bondarenko-mv)
+| [Original fortran code](https://figshare.com/articles/code/FORTRAN_code_for_mouse_atrial_myocytes/11628549)
+| [Paper](https://doi.org/10.1152/ajpheart.00460.2019) Asfaw, Tyan, Glukhov, Bondarenko (2020) A compartmentalized mathematical model of mouse atrial myocytes
+
+Modifications:
+- Converted from ventricular model
+
 ## 2020 Balakina-Vikulova HV
 Base: [Ten Tusscher 2006](#2006-ten-tusscher-hv), [Sulman 2008](#2008-sulman-gv)
 | [Paper](https://doi.org/10.1186/s12576-020-00741-6) Balakina-Vikulova, Panfilov, Solovyova, Katsnelson (2020) Mechano-calcium and mechano-electric feedbacks in the human cardiomyocyte analyzed in a mathematical model
@@ -1383,4 +1400,13 @@ Also cites a 2020 Ni paper, but that refers to Ellinwood.
 Base: [Morotti 2017](#2016-morotti-ha)
 | [Original C++ code](https://github.com/drgrandilab/Ni-et-al-2023-Human-Atrial-Signaling-Model)
 | [Paper](https://doi.org/10.1093/cvr/cvad118) Ni, Morotti et al., Grandi (2023) Integrative human atrial modelling unravels interactive PKA and CaMKII signalling as key determinants of atrial arrhythmogenesis
+
+## 2024 Botti Hi
+Base: [Paci 2020](#2020-paci-hi)
+| [Original matlab code](https://github.com/bottiso/AL_hiPSC_ionic_model)
+| [Paper](https://doi.org/10.1016/j.compbiomed.2024.108899) Botti, Bartolucci et al., Severi (2024) A novel ionic model for matured and paced atrial-like human iPSC-CMs integrating IKur and IKCa currents
+
+Modifications:
+- Added IKur and IKCa
+- Rescaled parameters to match atrial data
 
