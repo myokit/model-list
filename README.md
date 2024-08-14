@@ -557,7 +557,7 @@ Modifications:
 
 ## 2004 Ten Tusscher HV
 Base: Mostly new?
-| [Original code](https://tbb.bio.uu.nl/khwjtuss/SourceCodes/HVM)
+| [Original C code](https://tbb.bio.uu.nl/khwjtuss/SourceCodes/HVM)
 | [In Myokit repo](https://github.com/myokit/models/blob/main/c/tentusscher-2004.mmt)
 | [Paper](https://doi.org/10.1152/ajpheart.00794.2003) Ten Tusscher, Noble, Noble, Panfilov (2004) A Model for Human Ventricular Tissue
 
@@ -618,7 +618,7 @@ Base: [Fox 2002](#2002-fox-cv)
 
 ## 2006 Ten Tusscher HV
 Base: [Ten Tusscher 2004](#2004-ten-tusscher-hv)
-| [Original code](https://tbb.bio.uu.nl/khwjtuss/SourceCodes/HVM2)
+| [Original C code](https://tbb.bio.uu.nl/khwjtuss/SourceCodes/HVM2)
 | [In Myokit repo](https://github.com/myokit/models/blob/main/c/tentusscher-2006.mmt)
 | [Paper](https://doi.org/10.1152/ajpheart.00109.2006) Ten Tusscher, Panfilov (2006) Alternans and spiral breakup in a human ventricular tissue model
 
@@ -1220,7 +1220,7 @@ Base: [Shannon 2004](#2004-shannon-rv), [Ten Tusscher 2004](#2004-ten-tusscher-h
 
 ## 2019 Tomek HV
 Base: [O'Hara 2011](#2011-ohara-hv)
-| [Original Matlab and official CellML](https://github.com/jtmff/torord/commit/4ffab13b48f0923d38b0315f26be466a6fad8b70)
+| [Original Matlab and official CellML code](https://github.com/jtmff/torord/commit/4ffab13b48f0923d38b0315f26be466a6fad8b70)
 | [Paper](https://doi.org/10.7554/elife.48890) Tomek, Bueno-Orovio et al., Rodriguez (2019) Development, calibration, and validation of a novel human ventricular myocyte model in health, disease, and drug block
 
 ## 2020 Alghamdi LS
@@ -1265,7 +1265,7 @@ Modifications:
 
 ## 2020 Tomek HV
 Base: [Tomek 2019](#2019-tomek-hv)
-| [Original Matlab and official CellML](https://github.com/jtmff/torord)
+| [Original Matlab and official CellML code](https://github.com/jtmff/torord)
 | [Paper](https://doi.org/10.1101/2020.06.01.127043) Tomek, Bueno-Orovio, Rodriguez (2020) ToR-ORd-dynCl; an update of the ToR-ORd model of human ventricular cardiomyocyte with dynamic intracellular chloride
 
 Known as: ToR-ORd-dynCl
@@ -1275,7 +1275,7 @@ Modifications:
 
 ## 2020 Trovato HP
 Base: [O'Hara 2011](#2011-ohara-hv), [Li 2011](#2011-li-cp)
-| [Original Matlab and official CellML](https://www.cs.ox.ac.uk/insilicocardiotox/purkinje-models)
+| [Original Matlab and official CellML code](https://www.cs.ox.ac.uk/insilicocardiotox/purkinje-models)
 | [In Myokit repo](https://github.com/myokit/models/blob/main/c/trovato-2020.mmt)
 | [Paper](https://doi.org/10.1016/j.yjmcc.2020.04.001) Trovato, Passini et al., Rodriguez (2020) Human Purkinje in silico model enables mechanistic investigations into automaticity and pro-arrhythmic abnormalities
 
