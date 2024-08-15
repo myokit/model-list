@@ -1269,8 +1269,9 @@ Modifications:
 ## 2020 Tomek HV
 Base: [Tomek 2019](#2019-tomek-hv)
 | [Original Matlab and official CellML code](https://github.com/jtmff/torord)
-| [Paper](https://doi.org/10.1101/2020.06.01.127043) Tomek, Bueno-Orovio, Rodriguez (2020) ToR-ORd-dynCl; an update of the ToR-ORd model of human ventricular cardiomyocyte with dynamic intracellular chloride
-
+| [In Myokit repo](https://github.com/myokit/models/blob/main/c/tomek-2020.mmt)
+| [Paper 1](https://doi.org/10.7554/elife.48890) Tomek, Bueno-Orovio et al., Rodriguez (2019) Development, calibration, and validation of a novel human ventricular myocyte model in health, disease, and drug block
+| [Paper 2](https://doi.org/10.1101/2020.06.01.127043) Tomek, Bueno-Orovio, Rodriguez (2020) ToR-ORd-dynCl; an update of the ToR-ORd model of human ventricular cardiomyocyte with dynamic intracellular chloride
 Known as: ToR-ORd-dynCl
 
 Modifications:
