@@ -1132,6 +1132,7 @@ Base: [Colman 2013](#2013-colman-ha)
 
 ## 2017 Dutta HV
 Base: [Li 2017](#2017-li-hv)
+| [Original code](https://github.com/FDA/CiPA/blob/master/AP_simulation/models/newordherg_qNet.c)
 | [Official CellML](https://models.cellml.org/e/4e8/ohara_rudy_cipa_v1_2017.cellml/view)
 | [In Myokit repo](https://github.com/myokit/models/blob/main/c/ohara-cipa-v1-2017.mmt)
 | [Paper](https://doi.org/10.3389/fphys.2017.00616) Dutta, Chang et al., Li (2017) Optimization of an in-silico cardiac cell model for proarrhythmia risk assessment
@@ -1189,6 +1190,7 @@ Bits:
 ## 2018 Bai HA
 Base: [Ten Tusscher 2006](#2006-ten-tusscher-hv)
 | [Official CellML](https://models.cellml.org/workspace/520)
+| [In Myokit repo](https://github.com/myokit/models/blob/main/c/bai-2018.mmt)
 | [Paper](https://doi.org/10.1038/s41598-018-33958-y) Bai, Gladding et al., Zhao (2018) Ionic and cellular mechanisms underlying TBX5-PITX2 insufficiency-induced atrial fibrillation; Insights from mathematical models of human atrial cells
 
 Known as: TPA
@@ -1243,6 +1245,7 @@ Base: [Ten Tusscher 2006](#2006-ten-tusscher-hv), [Sulman 2008](#2008-sulman-gv)
 Base: [Dutta 2017](#2017-dutta-hv)
 | [Original matlab code](https://www.mcbeng.it/en/downloads/software/16-bps2020-model.html)
 | [Official CellML](https://models.physiomeproject.org/workspace/5fd)
+| [In Myokit repo](https://github.com/myokit/models/blob/main/c/bartolucci-2020.mmt)
 | [Paper](https://doi.org/10.3389/fphys.2020.00314) Bartolucci, Passini et al., Severi (2020) Simulation of the effects of extracellular calcium changes leads to a novel computational model of human ventricular action potential with a revised calcium handling
 
 Known as: BPS2020
