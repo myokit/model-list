@@ -740,6 +740,9 @@ Base: [Hund 2001](#2001-hund-gv) with many changes
 Base: [Ten Tusscher 2006](#2006-ten-tusscher-hv)
 | [Paper](https://doi.org/10.1016/j.pbiomolbio.2007.07.026) Ten Tusscher, Panfilov (2008) Modelling of the ventricular conduction system
 
+Modifications:
+- Scaled GKs by 0.35, GNa by 2.94. No other changes.
+
 ## 2008 Terkildsen LV
 Base: [Pandit 2001](#2001-pandit-lv), 
 | [Paper](https://doi.org/10.1113/expphysiol.2007.041871) Terkildsen, Niederer et al., Smith (2008) Using Physiome standards to couple cellular functions for rat cardiac excitation-contraction
@@ -1154,7 +1157,8 @@ Modifications:
 ## 2017 Fabbri HS
 Base: [Severi 2012](#2012-severi-rs)
 | [Official CellML](https://www.mcbeng.it/en/downloads/software/hap-san.html)
-| [Physiome reproduction](https://doi.org/10.36903/physiome.16550526)
+| [Physiome reproduction paper](https://doi.org/10.36903/physiome.16550526)
+| [In Myokit repo](https://github.com/myokit/models/blob/main/c/fabbri-2017.mmt)
 | [Paper](https://doi.org/10.1113/JP273259) Fabbri, Fantini, Wilders, Severi (2017) Computational analysis of the human sinus node action potential; model development and effects of mutations
 
 Known as: FWS
