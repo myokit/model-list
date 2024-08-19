@@ -1115,7 +1115,12 @@ Base: [Ramirez 2000](#2000-ramirez-ca)
 
 ## 2017 Aguilar HA
 Base: [Courtemanche 1998](#1998-courtemanche-ha)
+| [In Myokit repo](https://github.com/myokit/models/blob/main/c/aguilar-2017.mmt)
 | [Paper](https://doi.org/10.1016/j.bpj.2017.03.022) Aguilar, Feng et al., Nattel (2017) Rate-dependent role of IKur in human atrial repolarization and atrial fibrillation maintenance
+
+Modifications:
+- New IKur formulation
+- IKACh from Kneller 2002
 
 ## 2017 Bartos RV
 Base: [Negroni 2015](#2015-negroni-rv)
