@@ -1426,7 +1426,7 @@ Base: [O'Hara 2011](#2011-ohara-hv), but many new parts
 Base: [Fabbri 2017](#2017-fabbri-hs)
 | [Paper](https://doi.org/10.1016/j.pbiomolbio.2021.05.006) Hoekstra, van Ginneken, Wilders, Verkerk (2021) HCN4 current during human sinoatrial node-like action potentials
 
-## Morotti 2021 HV
+## 2021 Morotti HV
 Base: [Grandi 2010](#2010-grandi-hv)
 | [Original code](https://github.com/drgrandilab/Morotti-et-al-2021-Cross-species-translators-of-electrophysiological-response)
 | [Paper](https://www.science.org/doi/10.1126/sciadv.abg0927) Morotti, Liu et al., Grandi (2024) Quantitative cross-species translators of cardiac myocyte electrophysiology; Model training, experimental validation, and applications
@@ -1448,7 +1448,7 @@ Modifications:
 - Updated PKA signaling
 - Improved implementation of ODE calculation
 
-## Morotti 2021 RV
+## 2021 Morotti RV
 Base: [Bartos 2017](#2017-bartos-rv)
 | [Original code](https://github.com/drgrandilab/Morotti-et-al-2021-Cross-species-translators-of-electrophysiological-response)
 | [Paper](https://www.science.org/doi/10.1126/sciadv.abg0927) Morotti, Liu et al., Grandi (2024) Quantitative cross-species translators of cardiac myocyte electrophysiology; Model training, experimental validation, and applications
