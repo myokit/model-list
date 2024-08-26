@@ -177,7 +177,7 @@ Bits:
 
 ## 1985 Reiner RSf
 Base: [Bristow 1982](#1982-bristow-rsf)
-| | [Paper](https://doi.org/10.1152/ajpheart.1985.249.6.h1143) Reiner, Antzelevitch (1985) Phase resetting and annihilation in a mathematical model of sinus node
+| [Paper](https://doi.org/10.1152/ajpheart.1985.249.6.h1143) Reiner, Antzelevitch (1985) Phase resetting and annihilation in a mathematical model of sinus node
 
 Known as: Reiner-Antzelevitch
 
