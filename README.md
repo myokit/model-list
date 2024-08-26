@@ -574,6 +574,7 @@ Base: Mostly new?
 ## 2005 Kurata HV
 Base: [Priebe 1998](#1998-priebe-hv)
 | [Original simBio code](http://www.sim-bio.org/model/index.html#Kurata+model)
+| [Matlab code by Kunichika Tsumoto](https://github.com/92tsumoto/Kurata-2005)
 | [Paper](https://doi.org/10.1529/biophysj.105.060830) Kurata, Hisatome, Matsuda, Shibamoto (2005) Dynamical Mechanisms of Pacemaker Generation in IK1-Downregulated Human Ventricular Myocytes; Insights from Bifurcation Analyses of a Mathematical Model
 
 ## 2005 Michailova CV
