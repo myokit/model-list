@@ -1417,6 +1417,14 @@ Base: [Yang 2012](#2012-yang-hv)
 | [Original C++ code](https://github.com/drgrandilab/Fogli-Iseppe-et-al-2021-TdP-prediction)
 | [Paper](https://doi.org/10.1002/cpt.2240) Fogli Iseppe, Ni et al., Grandi (2021) Sex-specific classification of drug-induced Torsade de Pointes susceptibility using cardiac simulations and machine learning
 
+## 2021 Forouzandehmehr Hi
+Base: [Paci 2020](#2020-paci-hi), Rice 2008
+| [Original Matlab Code](https://www.mcbeng.it/en/downloads/software/hipsc-cm-ce.html) 
+| [Paper](https://doi.org/10.14814/phy2.15124) Forouzandehmehr, Koivumäki, Hyttinen, Paci (2021) A mathematical model of hiPSC cardiomyocytes electromechanics
+
+Modifications:
+- A new passive force accounting for inotropic effects of non-cardiomyocytes components in EHTs.
+
 ## 2021 Gaur PV
 Base: [O'Hara 2011](#2011-ohara-hv), but many new parts
 | [Original openCARP code](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009137#sec022) and official Myokit, and CellML code
@@ -1475,6 +1483,14 @@ Base: [Tomek 2020](#2020-tomek-hv), [Heijman 2011](#2011-heijman-cv)
 Modifications:
 - Added beta-adrenergic signalling
 
+## 2022 Forouzandehmehr Hi
+Base: [Forouzandehmehr 2021](#2021-forouzandemehr-hi), Tran 2017
+| [Original Matlab Code](https://www.mcbeng.it/en/download/2-software/21-himce.html) 
+| [Paper](https://doi.org/10.3389/fphys.2022.1010786) Forouzandehmehr, Paci, Koivumäki, Hyttinen (2022) Altered contractility in mutation-specific hypertrophic cardiomyopathy: A mechano-energetic in silico study with pharmacological insights
+
+Modifications:
+- Offering mechanoenergetic parameter identification to model MYH7R403Q HCM+Mavacamten, and dose-dependent effects of Blebbistatin and Omecamtiv mecarbil.
+
 ## 2022 Kohjitani Hi
 Base: [Himeno 2015](#2015-himeno-hv)
 | Code not quite available, point to e-Heart
@@ -1516,4 +1532,13 @@ Base: [Paci 2020](#2020-paci-hi)
 Modifications:
 - Added IKur and IKCa
 - Rescaled parameters to match atrial data
+
+## 2024 Forouzandehmehr Hi
+Base: [Forouzandehmehr](2022-forouzandehmehr Hi), Tran 2009, Tran 2017 
+| [Original Matlab Code](https://github.com/aminforouzandehmehr/Extracellular-Oxygen-Dynamics-Model) 
+| [Paper](https://doi.org/10.1242/dmm.050365) Forouzandehmehr, Paci, Hyttinen, Koivumäki (2024) In silico study of the mechanisms of hypoxia and contractile dysfunction during ischemia and reperfusion of hiPSC cardiomyocytes
+
+Modifications:
+- A new extracellular oxygen dynamics formulation, linking the cellular ionic and myofilament ATPase rate changes to extracellular and capillary level oxygen concentration.
+- Extending modeling approach to simulations of ischemia and Levosimendan mechanism of action.
 
