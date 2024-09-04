@@ -973,7 +973,7 @@ Base: [Decker 2009](#2009-decker-cv)
 Base: [Zhang 2000](#2000-zhang-rs), [Kurata 2002](#2002-kurata-rs)
 | [Paper](https://doi.org/10.1152/ajpheart.00143.2010) Kharche, Yu, Lei, Zhang (2011) A mathematical model of action potentials of mouse sinoatrial node cells with molecular bases
 
-## 2011 Koivumaki HA
+## 2011 Koivumaki-Korhonen HA
 Base: [Nygren 1998](#1998-nygren-ha)
 | [In Myokit repo](https://github.com/myokit/models/blob/main/c/koivumaki-2011.mmt)
 | [In PMR](https://models.physiomeproject.org/e/632)
