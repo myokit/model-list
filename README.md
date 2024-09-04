@@ -941,6 +941,7 @@ Base: [Saucerman 2008](#2008-saucerman-rv)
 ## 2011 Carro HV
 Base: [Grandi 2010](#2010-grandi-hv)
 | [Official CellML (in PMR)](https://models.physiomeproject.org/workspace/66b)
+| [In Myokit repo](https://github.com/myokit/models/blob/main/c/carro-2011.mmt)
 | [Paper](https://doi.org/10.1098/rsta.2011.0127) Carro, Rodriguez, Laguna, Pueyo (2011) A human ventricular cell model for investigation of cardiac arrhythmias under hyperkalaemic conditions
 
 Known as: CRLP
@@ -1313,6 +1314,7 @@ Base: [Paci 2017](#2017-paci-hi)
 ## 2019 Loewe HS
 Base: [Fabbri 2017](#2017-fabbri-hs)
 | [Official CellML (in PMR)](https://models.physiomeproject.org/workspace/58f)
+| [In Myokit repo](https://github.com/myokit/models/blob/main/c/loewe-2019.mmt)
 | [Paper](https://doi.org/10.1016/j.bpj.2019.07.037) Loewe, Lutz et al., Severi (2019) Hypocalcemia-Induced Slowing of Human Sinus Node Pacemaking
 
 ## 2019 Kernik Hi
