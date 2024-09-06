@@ -1536,7 +1536,7 @@ Modifications:
 - Rescaled parameters to match atrial data
 
 ## 2024 Forouzandehmehr Hi
-Base: [Forouzandehmehr](2022-forouzandehmehr Hi), Tran 2009, Tran 2017 
+Base: [Forouzandehmehr](2022-forouzandehmehr-hi), Tran 2009, Tran 2017 
 | [Original Matlab Code](https://github.com/aminforouzandehmehr/Extracellular-Oxygen-Dynamics-Model) 
 | [Paper](https://doi.org/10.1242/dmm.050365) Forouzandehmehr, Paci, Hyttinen, Koivumäki (2024) In silico study of the mechanisms of hypoxia and contractile dysfunction during ischemia and reperfusion of hiPSC cardiomyocytes
 
