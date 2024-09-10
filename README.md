@@ -1498,12 +1498,6 @@ Base: [Himeno 2015](#2015-himeno-hv)
 | Code not quite available, point to e-Heart
 | [Paper](https://doi.org/10.1038/s41598-022-23398-0) Kohjitani, Koda et al., Kimura (2022) Gradient-based parameter optimization method to determine membrane ionic current composition in human induced pluripotent stem cell-derived cardiomyocytes
 
-## 2022 Mahzar HA
-Base: [Koivumaki 2011](#2011-koivumaki-ha), Regazzoni 2020
-| [Paper](https://doi.org/10.1113/JP283974) Mazhar, Bartolucci et al., Severi (2023) A detailed mathematical model of the human atrial cardiomyocyte: integration of electrophysiology and cardiomechanics
-
-Known as: MBS2023
-
 ## 2022 Moise RS
 Base: [Severi 2012](#2012-severi-rs)
 | [Original matlab code](https://github.com/SHWeinberg/SAN_FeedbackModel)
@@ -1520,6 +1514,12 @@ Base: [Ellinwood 2017](#2017-ellinwood-ha)
 | [Paper](https://doi.org/10.1152/ajpheart.00362.2023) Herrera, Zhang et al., Morotti (2023) Dual effects of the small-conductance Ca-activated K current on human atrial electrophysiology and Ca-driven arrhythmogenesis; an in silico study
 
 Also cites a 2020 Ni paper, but that refers to Ellinwood.
+
+## 2023 Mahzar HA
+Base: [Koivumaki 2011](#2011-koivumaki-ha), Regazzoni 2020
+| [Paper](https://doi.org/10.1113/JP283974) Mazhar, Bartolucci et al., Severi (2023) A detailed mathematical model of the human atrial cardiomyocyte: integration of electrophysiology and cardiomechanics
+
+Known as: MBS2023
 
 ## 2023 Ni HA
 Base: [Morotti 2017](#2016-morotti-ha)
