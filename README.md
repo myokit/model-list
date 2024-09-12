@@ -1022,7 +1022,7 @@ Base: [Shannon 2004](#2004-shannon-rv)
 | [Paper](https://doi.org/10.1113/jphysiol.2012.231886) Morotti, Grandi et al., Bers (2012) Theoretical Study of L-type Ca2+ Current Inactivation Kinetics during Action Potential Repolarization and Early Afterdepolarizations
 
 Modifications:
-- ICaL model adapted and modified from Mahajan
+- ICaL model adapted and modified from Mahajan-Shiferaw
 
 ## 2012 Paci He
 Base: [Grandi 2009](#2009-grandi-hv)
