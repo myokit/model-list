@@ -789,10 +789,10 @@ Base: [Dokos 1996](#1996-dokos-rs), [Bondarenko 2004](#2004-bondarenko-mv)
 Base: [Kurata 2002](#2002-kurata-rs)
 | [Paper](https://doi.org/10.1529/biophysj.107.112854) Kurata, Matsuda, Hisatome, Shibamoto (2008) Regional difference in dynamical property of sinoatrial node pacemaking; role of Na channel current
 
-## 2008 Mahajan RV
+## 2008 Mahajan-Shiferaw RV
 Base: [Shannon 2004](#2004-shannon-rv)
 | [In PMR](https://models.physiomeproject.org/exposure/a5586b72d07ce03fc40fc98ee846d7a5)
-| [Paper](https://doi.org/10.1529/biophysj.106.98160) Mahajan, Shiferaw et al., Weiss (2008) A Rabbit Ventricular Action Potential Model Replicating Cardiac Dynamics at Rapid Heart Rates
+| [Paper](https://doi.org/10.1529/biophysj.106.98160) Mahajan*, Shiferaw* et al., Weiss (2008) A Rabbit Ventricular Action Potential Model Replicating Cardiac Dynamics at Rapid Heart Rates
 
 ## 2008 Pasek GV
 Base: [Hund 2001](#2001-hund-gv) with many changes
@@ -1022,7 +1022,7 @@ Base: [Shannon 2004](#2004-shannon-rv)
 | [Paper](https://doi.org/10.1113/jphysiol.2012.231886) Morotti, Grandi et al., Bers (2012) Theoretical Study of L-type Ca2+ Current Inactivation Kinetics during Action Potential Repolarization and Early Afterdepolarizations
 
 Modifications:
-- ICaL model adapted and modified from Mahajan
+- ICaL model adapted and modified from Mahajan-Shiferaw
 
 ## 2012 Paci He
 Base: [Grandi 2009](#2009-grandi-hv)
