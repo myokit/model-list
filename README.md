@@ -1436,6 +1436,13 @@ Base: [O'Hara 2011](#2011-ohara-hv), but many new parts
 Base: [Fabbri 2017](#2017-fabbri-hs)
 | [Paper](https://doi.org/10.1016/j.pbiomolbio.2021.05.006) Hoekstra, van Ginneken, Wilders, Verkerk (2021) HCN4 current during human sinoatrial node-like action potentials
 
+## 2021 Margara HV
+Base: [O'Hara 2011](#2011-ohara-hv) and [Tomek 2020](#2020-tomek-hv)
+| [Paper](https://doi.org/10.1016/j.pbiomolbio.2020.06.007) Margara, Wang et al., Rodriguez (2021) In-silico human electro-mechanical ventricular modelling and simulation for drug-induced pro-arrhythmia and inotropic risk assessment
+
+Modifications:
+- Added Land contraction model to O'Hara and Tomek, partially recalibrated and compared.
+
 ## 2021 Morotti HV
 Base: [Grandi 2010](#2010-grandi-hv)
 | [Original code](https://github.com/drgrandilab/Morotti-et-al-2021-Cross-species-translators-of-electrophysiological-response)
