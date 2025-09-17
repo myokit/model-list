@@ -1,0 +1,22 @@
+[flake8]
+filename=
+    *.py,
+exclude=
+    .git,
+    .github,
+ignore=
+    # Block comment should start with '# '
+    E265,
+    # "Do not assign a labmda expression, use a def".
+    E731,
+    # Ambiguous variable names
+    E741,
+    # List comprehension redefines variable
+    F812,
+    # Blank line at end of file
+    W391,
+    # Binary operator on new line, now advised in pep8
+    W503,
+    # Line break after binary operator
+    W504,
+

@@ -89,7 +89,6 @@ class Model:
 
     re_matlab = None
 
-
     def __init__(self, first, year, preparation, year_letter=None):
         self.first, self.year, self.preparation = first, year, preparation
         self.year_letter = year_letter
@@ -104,6 +103,9 @@ class Model:
 
     def __str__(self):
         return f'{self.year} {self.first} {self.preparation}'
+
+    def __repr__(self):
+        return f'Model<{self.first} {self.year} {self.preparation}>'
 
 
 def _lvsd(s, t):
@@ -208,7 +210,7 @@ def load_models(warnings=True):
     except ValueError:
         raise ParseError('Unable to find first model "{FIRST}"')
 
-    ## Split into model entries
+    # Split into model entries
     models = {}
     for entry in text.split('\n##')[1:]:
         entry = entry.strip().split('\n')
@@ -301,7 +303,6 @@ def load_models(warnings=True):
 
     # Check bases given by models
     for model in models.values():
-        bases = []
         for base in model.bases:
             if base not in models:
                 k, d = _didyoumean(base, models)
