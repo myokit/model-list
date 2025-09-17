@@ -1,3 +1,5 @@
+[![Syntax check](https://github.com/myokit/model-list/actions/workflows/syntax-check.yml/badge.svg)](https://github.com/myokit/model-list/actions/workflows/syntax-check.yml)
+
 # Action potential models
 
 This is a list of published action potential models.
