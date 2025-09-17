@@ -1,6 +1,5 @@
-[![Syntax check](https://github.com/myokit/model-list/actions/workflows/syntax-check.yml/badge.svg)](https://github.com/myokit/model-list/actions/workflows/syntax-check.yml)
-
 # Action potential models
+[![Syntax check](https://github.com/myokit/model-list/actions/workflows/syntax-check.yml/badge.svg)](https://github.com/myokit/model-list/actions/workflows/syntax-check.yml)
 
 This is a list of published action potential models.
 Specifically, detailed models (not reduced or propagation focussed) without stochastics (no release units).
