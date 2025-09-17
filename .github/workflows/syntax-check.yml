@@ -1,4 +1,4 @@
-name: Model list syntax check
+name: Syntax check
 on:
   push:
     branches:
