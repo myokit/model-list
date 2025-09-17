@@ -1242,7 +1242,7 @@ Base: [Colman 2013](#2013-colman-ha)
 ## 2017 Dutta HV
 Base: [Li 2017](#2017-li-hv)
 | [Original C code](https://github.com/FDA/CiPA/blob/master/AP_simulation/models/newordherg_qNet.c)
-| [Official CellML](https://models.physiomeproject.org/e/4e8/ohara_rudy_cipa_v1_2017.cellml/view)
+| [Official CellML](https://models.physiomeproject.org/e/4e8)
 | [In Myokit repo](https://github.com/myokit/models/blob/main/c/ohara-cipa-v1-2017.mmt)
 | [Paper](https://doi.org/10.3389/fphys.2017.00616) Dutta, Chang et al., Li (2017) Optimization of an in-silico cardiac cell model for proarrhythmia risk assessment
 

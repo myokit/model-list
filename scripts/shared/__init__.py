@@ -107,6 +107,19 @@ class Model:
     def __repr__(self):
         return f'Model<{self.first} {self.year} {self.preparation}>'
 
+    def pmr_link(self):
+        """
+        Returns a PMR link, looking first at the ``org_cellml`` property, then
+        ``off_cellml``, and finally ``pmr``.
+
+        Returns ``None`` if no PMR link found.
+        """
+        for link in (self.org_cellml, self.off_cellml, self.pmr):
+            if link is not None:
+                if link.startswith('https://models.physiomeproject.org/'):
+                    return link
+        return None
+
 
 def _lvsd(s, t):
     """Returns the Levenshtein distance between two strings ``s`` and ``t``."""
@@ -320,5 +333,5 @@ def load_models(warnings=True):
                     f'Unknown base: {base} set for {model}{close}')
         model.bases = [models[base] for base in model.bases]
 
-    return models
+    return list(models.values())
 
