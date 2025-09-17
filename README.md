@@ -901,7 +901,7 @@ Base: [Kurata 2002](#2002-kurata-rs), [Shannon 2004](#2004-shannon-rv)
 
 ## 2009 Stewart HP
 Base: [Ten Tusscher 2006](#2006-ten-tusscher-hv)
-| [Original CellML](https://models.cellml.org/workspace/stewart_aslanidi_noble_noble_boyett_zhang_2009)
+| [Original CellML](https://models.physiomeproject.org/workspace/stewart_aslanidi_noble_noble_boyett_zhang_2009)
 | [In Myokit repo](https://github.com/myokit/models/blob/main/c/stewart-2009.mmt)
 | [Paper](https://doi.org/10.1098/rsta.2008.0283) Stewart, Aslanidi et al., Zhang (2009) Mathematical model of the electrical action potential of Purkinje fibre cells
 
@@ -930,7 +930,7 @@ Base: [Korhonen 2008](#2008-korhonen-md)
 
 ## 2010 Li MV
 Base: [Bondarenko 2004](#2004-bondarenko-mv)
-| [Official CellML](https://models.cellml.org/workspace/li_smith_2009)
+| [Official CellML](https://models.physiomeproject.org/workspace/li_smith_2009)
 | [Paper](https://doi.org/10.1152/ajpheart.00219.2010) Li, Niederer et al., Smith (2010) A mathematical model of the murine ventricular myocyte; a data-driven biophysically based approach applied to mice overexpressing the canine NCX isoform
 
 ## 2010 Maltsev RS
@@ -959,7 +959,7 @@ Known as: CRLP
 
 ## 2011 Corrias RP
 Base: [DiFrancesco 1985](#1985-difrancesco-mpf), but many new parts
-| [Official CellML](https://models.cellml.org/w/alberto/CorriasPurkinje)
+| [Official CellML](https://models.physiomeproject.org/w/alberto/CorriasPurkinje)
 | [Paper](https://doi.org/10.1152/ajpheart.01170.2010) Corrias, Giles, Rodriguez (2011) Ionic mechanisms of electrophysiological properties and repolarization abnormalities in rabbit Purkinje fibers
 
 ## 2011 Grandi-Pandit-Voigt HA
@@ -1242,7 +1242,7 @@ Base: [Colman 2013](#2013-colman-ha)
 ## 2017 Dutta HV
 Base: [Li 2017](#2017-li-hv)
 | [Original C code](https://github.com/FDA/CiPA/blob/master/AP_simulation/models/newordherg_qNet.c)
-| [Official CellML](https://models.cellml.org/e/4e8/ohara_rudy_cipa_v1_2017.cellml/view)
+| [Official CellML](https://models.physiomeproject.org/e/4e8/ohara_rudy_cipa_v1_2017.cellml/view)
 | [In Myokit repo](https://github.com/myokit/models/blob/main/c/ohara-cipa-v1-2017.mmt)
 | [Paper](https://doi.org/10.3389/fphys.2017.00616) Dutta, Chang et al., Li (2017) Optimization of an in-silico cardiac cell model for proarrhythmia risk assessment
 
@@ -1301,7 +1301,7 @@ Bits:
 
 ## 2018 Bai HA
 Base: [Ten Tusscher 2006](#2006-ten-tusscher-hv)
-| [Official CellML](https://models.cellml.org/workspace/520)
+| [Official CellML](https://models.physiomeproject.org/workspace/520)
 | [In Myokit repo](https://github.com/myokit/models/blob/main/c/bai-2018.mmt)
 | [Paper](https://doi.org/10.1038/s41598-018-33958-y) Bai, Gladding et al., Zhao (2018) Ionic and cellular mechanisms underlying TBX5-PITX2 insufficiency-induced atrial fibrillation; Insights from mathematical models of human atrial cells
 
@@ -1565,10 +1565,14 @@ Modifications:
 - A new extracellular oxygen dynamics formulation, linking the cellular ionic and myofilament ATPase rate changes to extracellular and capillary level oxygen concentration.
 - Extending modeling approach to simulations of ischemia and Levosimendan mechanism of action.
 
-
-
 ## 2025 Linder RS
 Base: [Severi 2012](#2012-severi-rs)
+| [Official CellML](https://models.physiomeproject.org/e/d14)
+| [Paper](https://doi.org/10.1113/JP287557) Linder, Stary, Bitay, Nagy, Loewe (2025) Sympathetic stimulation can compensate for hypocalcaemia-induced bradycardia in human and rabbit sinoatrial node cells
+
+## 2025 Linder HS
+Base: [Fabbri 2017](#2017-fabbri-hs)
+| [Official CellML](https://models.physiomeproject.org/e/d14)
 | [Paper](https://doi.org/10.1113/JP287557) Linder, Stary, Bitay, Nagy, Loewe (2025) Sympathetic stimulation can compensate for hypocalcaemia-induced bradycardia in human and rabbit sinoatrial node cells
 
 

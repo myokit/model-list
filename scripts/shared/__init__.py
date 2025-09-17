@@ -281,6 +281,15 @@ def load_models(warnings=True):
                     raise ParseError(
                         f'Duplicate structured entry: "{field}"', entry)
 
+                # Check PMR links are up to date
+                if 'models.cellml.org' in url:
+                    raise ParseError('PMR link using cellml.org instead of'
+                                     f' physiomeproject.org: {url}', entry)
+                if url.startswith('http://models.physiomeproject'):
+                    raise ParseError(
+                        f'PMR link using http instead of https: {url}', entry)
+
+                # Store reimplementations in array, rest as property
                 if 'reimplementation' in field:
                     getattr(model, field).append(url)
                 else:
