@@ -29,6 +29,7 @@ Ordering is year, then first author alphabetically.
 - M Mouse
 - P Pig
 - R Rabbit
+- Z Zebrafish
 - m Mammal
 
 **Preparation**
@@ -997,6 +998,12 @@ Base: [Decker 2009](#2009-decker-cv)
 
 Known as: PRd
 
+## 2011 Marger MN
+Base: [Mangoni 2006](#2006-mangoni-ms)
+| [Paper](https://doi.org/10.4161/chan.5.3.15266) Marger, Mesirca et al. Mangoni (2011) Functional roles of Cav1.3, Cav3.1 and HCN channels in automaticity of mouse atrioventricular cells: Insights into the atrioventricular pacemaker mechanism
+
+Used JSim. Model code "available on request".
+
 ## 2011 Moreno HV
 Base: [Ten Tusscher 2006](#2006-ten-tusscher-hv)
 | [Paper](https://doi.org/10.1126/scitranslmed.3002588) Moreno, Zhu et al., Clancy (2011) A computational model to predict the effects of class I anti-arrhythmic drugs on ventricular rhythms
@@ -1497,6 +1504,11 @@ Modifications:
 - Added Land 2017 contraction model
 - ...
 
+## 2022 Ding MS
+Base: [Morotti 2021](#2021-morotti-ms)
+| [Paper](https://doi.org/10.7554/eLife.77327) Ding, Lang et al. Xu (2022) A phenotype-based forward genetic screen identifies Dnajb6 as a sick sinus syndrome gene
+| [Original Matlab code](https://github.com/drgrandilab/Ding-et-al-2022-mouse-sinoatrial-model)
+
 ## 2022 Doste HV
 Base: [Tomek 2020](#2020-tomek-hv), [Heijman 2011](#2011-heijman-cv)
 | [Original Matlab code](https://github.com/rdoste/ToR-ORd-BARS)
@@ -1524,6 +1536,13 @@ Base: [Severi 2012](#2012-severi-rs)
 | [Original Matlab code](https://github.com/SHWeinberg/SAN_FeedbackModel)
 | [Paper](https://doi.org/10.1016/j.bpj.2023.03.024) Moise, Weinberg (2022) Emergent Electrical Activity, Tissue Heterogeneity, and Robustness in a Calcium Feedback Regulatory Model of the Sinoatrial Node
 
+## 2023 Buonocunto HV
+Base: [Tomek 2019](#2019-tomek-hv)
+| [Paper](https://doi.org/10.1113/JP284439) Buonocunto, Lyon et al. Lumens (2023) Electrophysiological effects of stretch-activated ion channels: a systematic computational characterization
+| [Original Matlab code](https://github.com/melaniabuonoc/Electrophysiological-effects-of-stretch-activated-ion-channels)
+
+Added three stretch-activated currents.
+
 ## 2023 Heijman HA
 Base: [Grandi 2011](#2011-grandi-pandit-voigt-ha)
 | [Original Matlab code](https://github.com/drgrandilab/Heijman-et-al-2023-Human-Atrial-Model)
@@ -1547,6 +1566,10 @@ Base: [Morotti 2017](#2016-morotti-ha)
 | [Original C++ code](https://github.com/drgrandilab/Ni-et-al-2023-Human-Atrial-Signaling-Model)
 | [Paper](https://doi.org/10.1093/cvr/cvad118) Ni, Morotti et al., Grandi (2023) Integrative human atrial modelling unravels interactive PKA and CaMKII signalling as key determinants of atrial arrhythmogenesis
 
+## 2024 Bartolucci MN
+Base: [Marger 2011](#2011-marger-mn), [Kharche 2011](#2011-kharche-ms)
+| [Paper](https://doi.org/10.1113/JP285950) Bartolucci, Mesirca et al., Severi (2025) Computational modelling of mouse atrio ventricular node action potential and automaticity
+
 ## 2024 Botti Hi
 Base: [Paci 2020](#2020-paci-hi)
 | [Original Matlab code](https://github.com/bottiso/AL_hiPSC_ionic_model)
@@ -1565,6 +1588,18 @@ Modifications:
 - A new extracellular oxygen dynamics formulation, linking the cellular ionic and myofilament ATPase rate changes to extracellular and capillary level oxygen concentration.
 - Extending modeling approach to simulations of ischemia and Levosimendan mechanism of action.
 
+## 2024 Shetty Hi
+Base: [Kernik 2019](#2019-kernik-hi)
+| [Preprint](https://doi.org/10.1101/2024.09.03.611054) Shetty, Samurkashian, Tung (2024) Computational Study of the Excitation of Human Induced Pluripotent Stem-Cell Derived Cardiomyocytes
+
+Code will eventually be at https://github.com/HopkinsCBSLab/iPSC_Computational_Excitability
+
+## 2025 Cestariolo ZV
+Base: [Ten Tusscher 2004](#2004-ten-tusscher-hv)
+| [Original Matlab code](https://github.com/jfrodrig1971/Zebrafish)
+| [Official CellML](https://github.com/jfrodrig1971/Zebrafish)
+| [Paper](https://doi.org/10.1113/JP287624) Cestariolo, Long et al., Matas (2025) Mathematical model of the zebrafish ventricular cardiomyocyte action potential and calcium transient
+
 ## 2025 Linder RS
 Base: [Severi 2012](#2012-severi-rs)
 | [Official CellML](https://models.physiomeproject.org/e/d14)
@@ -1574,5 +1609,4 @@ Base: [Severi 2012](#2012-severi-rs)
 Base: [Fabbri 2017](#2017-fabbri-hs)
 | [Official CellML](https://models.physiomeproject.org/e/d14)
 | [Paper](https://doi.org/10.1113/JP287557) Linder, Stary, Bitay, Nagy, Loewe (2025) Sympathetic stimulation can compensate for hypocalcaemia-induced bradycardia in human and rabbit sinoatrial node cells
-
 

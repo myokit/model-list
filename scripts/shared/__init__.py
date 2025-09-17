@@ -26,6 +26,7 @@ _struct = {
     'Paper': 'doi',
     'Chapter': 'doi',
     'Abstract': 'doi',
+    'Preprint': 'doi',
     'Correction': 'doi_corr',
     'Physiome reproduction paper': 'doi_physiome',
 
@@ -231,7 +232,11 @@ def load_models(warnings=True):
         # Get year, first author, model type
         m = rhead.fullmatch(entry[0])
         if m is None:
-            raise ParseError(f'Unable to parse header "{entry[0]}"', entry)
+            hint = ''
+            if len(entry[0]) > 0 and entry[0][0] not in '12':
+                hint = ', expected format: Year Author Type'
+            raise ParseError(
+                f'Unable to parse header "{entry[0]}"{hint}', entry)
         year, letter = _parse_year(m.group(1), entry)
         model = Model(m.group(2), year, m.group(3), letter)
         models[model.key] = model
@@ -257,6 +262,11 @@ def load_models(warnings=True):
                                    f' included in link title "{m.group(1)}"'
                         elif title[0] in '12':
                             hint = ', title format should be Author Year'
+                        else:
+                            link = m.group(2)
+                            if len(link) > 1 and link[1] not in '12':
+                                hint = \
+                                    ', link format should be #year-author-type'
                         raise ParseError(
                             f'Unable to parse base: {base}{hint}', entry)
                     continue
