@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# Show statistics about the model list
+# Creates plots based on the model list and manually gathered PMR data.
 #
 import sys
 
@@ -42,19 +42,6 @@ if __name__ == '__main__':
 
     print('-' * 79)
 
-    formats = {
-        'cellml': 'CellML', 'c': 'C', 'cpp': 'C++', 'fortran': 'Fortran',
-        'matlab': 'Matlab', 'delphi': 'Delphi', 'visbas': 'Visual basic',
-        'simbio': 'simBio', 'carp': 'CARP',
-    }
-    counts = {k: 0 for k in formats}
-    for m in models:
-        for org in m.author_provided_formats():
-            counts[org[4:]] += 1
-    print('Author provided formats:')
-    for k, v in sorted(counts.items(), key=lambda x: -x[1]):
-        name = formats[k]
-        print(name + ' ' * (14 - len(name)) + f'{v:3d}')
 
     sys.exit(0)
 

@@ -120,9 +120,8 @@ class Model:
         if self.myokit_repo:
             return True
         for k, v in vars(self).items():
-            if v is not None and (k.startswith('off_') or k.startswith('org_')
-                                  or k.startswith('upd_')):
-                    return True
+            if v is not None and k.startswith(('off_', 'org_', 'upd_')):
+                return True
             if k.startswith('re_') and len(v) > 0:
                 return True
         return False
@@ -132,17 +131,24 @@ class Model:
         Returns True if author-provided code (official or original) is
         available, in any format.
         """
-        for k, v in vars(self).items():
-            if v is not None:
-                if (k.startswith('off_') or k.startswith('org_')):
-                    return True
-        return False
+        return len(self.author_provided_formats()) > 0
 
     def on_pmr(self):
         """
         Returns True if this model is available from PMR.
         """
         return self.pmr_link() is not None
+
+    def author_provided_formats(self):
+        """
+        Returns a list of formats in which original or official code is listed
+        for this model.
+        """
+        orgs = set()
+        for k, v in vars(self).items():
+            if v is not None and k.startswith(('off_', 'org_')):
+                orgs.add(k)
+        return orgs
 
     def pmr_link(self):
         """
