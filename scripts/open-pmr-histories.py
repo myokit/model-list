@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 #
-# Shows models that are on PMR, and lists their PMR workspaces (converting
-# exposures to workspaces via PMR's API).
+# Scans for models that are on PMR, constructs a link to their history pages,
+# and opens them in a browser.
 #
 import json
 import sys
 import urllib.request
+import webbrowser
 
 from shared import load_models, ParseError, print_parse_error
 
@@ -52,8 +53,19 @@ if __name__ == '__main__':
         print_parse_error(e)
         sys.exit(1)
 
+    print('This script is about to make several HTTP requests to convert')
+    print(' links to PMR exposures into workspace links, and will then open')
+    print(' several browser windows.')
+    ok = input('Continue (y/n)? ').strip().lower()
+    if ok not in ('y', 'yes'):
+        print('Halted')
+        sys.exit(1)
+
+    print('"Tag","Year added","Author"')
     for model in models:
         pmr = model.pmr_link()
         if pmr is not None:
-            print(model, history_link(pmr))
+            pmr = history_link(pmr)
+            webbrowser.open(pmr)
+            print(f'"{model.key}",20,""')
 

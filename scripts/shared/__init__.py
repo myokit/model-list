@@ -19,9 +19,7 @@ _rlink = r'\[([^]]+)\]\(([^)]+?)\)'
 
 # Structured entries
 _struct = {
-    'In PMR': 'pmr',
-    'In PMR': 'pmr',
-    'In Myokit repo': 'mmt',
+    'In Myokit repo': 'myokit_repo',
 
     'Paper': 'doi',
     'Chapter': 'doi',
@@ -30,10 +28,7 @@ _struct = {
     'Correction': 'doi_corr',
     'Physiome reproduction paper': 'doi_physiome',
 
-    'Official CellML': 'off_cellml',
-    'Official simBio code': 'off_simbio',
-    'Official C code': 'off_c',
-
+    # Code used to generate results in the original publication
     'Original CellML': 'org_cellml',
     'Original C code': 'org_c',
     'Original C++ code': 'org_cpp',
@@ -44,10 +39,18 @@ _struct = {
     'Original simBio code': 'org_simbio',
     'Original openCARP code': 'org_carp',
 
+    # Author-sanctioned code, e.g. CellML generated when writing the paper
+    'Official CellML': 'off_cellml',
+    'Official simBio code': 'off_simbio',
+    'Official C code': 'off_c',
+
+    # Updated code published by authors or others
     'Updated C++ code': 'upd_cpp',
     'Updated Matlab code': 'upd_matlab',
     'Updated Visual Basic code': 'upd_visbas',
 
+    # New implementation, e.g. by a CellML curator
+    'CellML reimplementation': 're_cellml',
     'Matlab reimplementation': 're_matlab',
 }
 
@@ -67,8 +70,7 @@ class Model:
     doi_corr = None
     doi_physiome = None
 
-    mmt = None
-    pmr = None
+    myokit_repo = None
 
     off_cellml = None
     off_simbio = None
@@ -88,6 +90,8 @@ class Model:
     upd_cpp = None
     upd_visbas = None
 
+    # Lists of reimplementations
+    re_cellml = None
     re_matlab = None
 
     def __init__(self, first, year, preparation, year_letter=None):
@@ -100,6 +104,7 @@ class Model:
         self.key = f'{y}-{f}-{p}'
 
         self.bases = []
+        self.re_cellml = []
         self.re_matlab = []
 
     def __str__(self):
@@ -108,6 +113,37 @@ class Model:
     def __repr__(self):
         return f'Model<{self.first} {self.year} {self.preparation}>'
 
+    def has_code(self):
+        """
+        Returns True if _any_ code is available for this model.
+        """
+        if self.myokit_repo:
+            return True
+        for k, v in vars(self).items():
+            if v is not None and (k.startswith('off_') or k.startswith('org_')
+                                  or k.startswith('upd_')):
+                    return True
+            if k.startswith('re_') and len(v) > 0:
+                return True
+        return False
+
+    def has_author_provided_code(self):
+        """
+        Returns True if author-provided code (official or original) is
+        available, in any format.
+        """
+        for k, v in vars(self).items():
+            if v is not None:
+                if (k.startswith('off_') or k.startswith('org_')):
+                    return True
+        return False
+
+    def on_pmr(self):
+        """
+        Returns True if this model is available from PMR.
+        """
+        return self.pmr_link() is not None
+
     def pmr_link(self):
         """
         Returns a PMR link, looking first at the ``org_cellml`` property, then
@@ -115,7 +151,7 @@ class Model:
 
         Returns ``None`` if no PMR link found.
         """
-        for link in (self.org_cellml, self.off_cellml, self.pmr):
+        for link in self.re_cellml + [self.org_cellml, self.off_cellml]:
             if link is not None:
                 if link.startswith('https://models.physiomeproject.org/'):
                     return link
@@ -313,7 +349,7 @@ def load_models(warnings=True):
                         f'PMR link using http instead of https: {url}', entry)
 
                 # Store reimplementations in array, rest as property
-                if 'reimplementation' in field:
+                if field.startswith('re_'):
                     getattr(model, field).append(url)
                 else:
                     getattr(model, field)  # Check exists
