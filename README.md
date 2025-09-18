@@ -108,6 +108,10 @@ Some CaRU stochastic/spatial models:
 - Voigt 2014 built a CaRU model based on Voigt 2013
 - Sutanto 2018 adapted the Voigt 2014 model
 - Maltsev 2022 build on Stern 2014
+- Zhang 2023
+- Kim 2025
+- Neubert 2025
+- Zhang 2025
 
 Some models with other features:
 - Seemann et al. 2003 extend Priebe-Beuckelman with force generation (partial derivative) equations
@@ -895,6 +899,8 @@ Base: [Nygren 1998](#1998-nygren-ha)
 | [In PMR](https://models.physiomeproject.org/e/806)
 | [Paper](https://doi.org/10.1152/ajpheart.00411.2009) Maleckar, Greenstein, Giles, Trayanova (2009) K current changes account for the rate dependence of the action potential in the human atrial myocyte
 
+The cited paper is sometimes [This one](10.1016/j.pbiomolbio.2009.01.010): Maleckar, Greenstein, Trayanova, Giles (2009) Mathematical simulations of ligand-gated and cell-type specific effects on the action potential of human atrium
+
 ## 2009 Maltsev RS
 Base: [Kurata 2002](#2002-kurata-rs), [Shannon 2004](#2004-shannon-rv)
 | [In PMR](https://models.physiomeproject.org/exposure/3c1c7b17df06921a4e1b05c639a45d32)
@@ -1136,6 +1142,7 @@ Base: [Soltis 2010](#2010-soltis-rv)
 
 ## 2014 Tong mV
 Base: [Faber 2000](#2000-faber-gv)
+| [Official CellML](https://models.physiomeproject.org/e/264) (in PMR)
 | [Paper](https://doi.org/10.3389/fphys.2014.00399) Tong, Ghouri, Taggart (2014) Computational modeling of inhibition of voltage-gated Ca channels: identification of different effects on uterine and cardiac action potentials 
 
 ## 2014 Yang MV
@@ -1588,11 +1595,29 @@ Modifications:
 - A new extracellular oxygen dynamics formulation, linking the cellular ionic and myofilament ATPase rate changes to extracellular and capillary level oxygen concentration.
 - Extending modeling approach to simulations of ischemia and Levosimendan mechanism of action.
 
+## 2024 Gomez HV
+Base: [O'Hara 2011](#2011-ohara-hv)
+| [Paper](https://doi.org/10.1109/JBHI.2024.3495027) Gomez, Carro et al., Monasterio (2024) In Silico Modeling and Validation of the Effect of Calcium-Activated Potassium Current on Ventricular Repolarization in Failing Myocytes
+
+Add SK channels.
+Use DENIS and a CellML model, but no link.
+
 ## 2024 Shetty Hi
 Base: [Kernik 2019](#2019-kernik-hi)
 | [Preprint](https://doi.org/10.1101/2024.09.03.611054) Shetty, Samurkashian, Tung (2024) Computational Study of the Excitation of Human Induced Pluripotent Stem-Cell Derived Cardiomyocytes
 
 Code will eventually be at https://github.com/HopkinsCBSLab/iPSC_Computational_Excitability
+
+## 2024 Trancuccio PV
+Base: [O'Hara 2011](#2011-ohara-hv)
+| [Paper](https://doi.org/10.1038/s41598-024-80726-2) Trancuccio, Tarifa et al., Santiago (2024) A novel computational model of swine ventricular myocyte reveals new insights into disease mechanisms and therapeutic approaches in Timothy Syndrome
+
+Code said to be at https://shorturl.at/tQiRN but this doesn't resolve.
+
+## 2025 Bai HA
+Base: [Grandi 2011](#2011-grandi-pandit-voigt-ha)
+| [Original Matlab code](https://github.com/xuanyuanzaishui/Sex-Specific-Classification-of-Antiarrhythmic-Drugs)
+| [Paper](https://doi.org/10.1371/journal.pcbi.1013154) Bai, Wang et al., Zhao (2025) Digital twin for sex-specific identification of class III antiarrhythmic drugs based on in vitro measurements, computer models, and machine learning tools
 
 ## 2025 Cestariolo ZV
 Base: [Ten Tusscher 2004](#2004-ten-tusscher-hv)
@@ -1609,4 +1634,9 @@ Base: [Severi 2012](#2012-severi-rs)
 Base: [Fabbri 2017](#2017-fabbri-hs)
 | [Official CellML](https://models.physiomeproject.org/e/d14)
 | [Paper](https://doi.org/10.1113/JP287557) Linder, Stary, Bitay, Nagy, Loewe (2025) Sympathetic stimulation can compensate for hypocalcaemia-induced bradycardia in human and rabbit sinoatrial node cells
+
+## 2025 Pikunov HA
+Base: [Maleckar 2009](#2009-maleckar-ha)
+| [Original C code](https://github.com/humanphysiologylab/models_ctypes/tree/main/src/model_ctypes/_maleckar_ical_ghk_tor)
+| [Paper](https://doi.org/10.1161/CIRCEP.125.013898) Pikunov, Syunyaev et al., Efimov (2025) Role of Structural Versus Cellular Remodeling in Atrial Arrhythmogenesis; Insights From Personalized Digital Twins
 
