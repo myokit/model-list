@@ -55,6 +55,19 @@ _struct = {
 }
 
 
+format_codes = {
+    'cellml': 'CellML',
+    'c': 'C',
+    'cpp': 'C++',
+    'carp': 'CARP',
+    'delphi': 'Delphi',
+    'fortran': 'Fortran',
+    'matlab': 'Matlab',
+    'simbio': 'simBio',
+    'visbas': 'Visual basic',
+}
+
+
 class Model:
     """
     Model, as read from the list.
@@ -147,7 +160,7 @@ class Model:
         orgs = set()
         for k, v in vars(self).items():
             if v is not None and k.startswith(('off_', 'org_')):
-                orgs.add(k)
+                orgs.add(k[4:])
         return orgs
 
     def pmr_link(self):

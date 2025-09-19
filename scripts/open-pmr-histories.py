@@ -46,26 +46,25 @@ def history_link(pmr):
     return f'{pmr}/{page}'
 
 
-if __name__ == '__main__':
-    try:
-        models = load_models()
-    except ParseError as e:
-        print_parse_error(e)
-        sys.exit(1)
+try:
+    models = load_models()
+except ParseError as e:
+    print_parse_error(e)
+    sys.exit(1)
 
-    print('This script is about to make several HTTP requests to convert')
-    print(' links to PMR exposures into workspace links, and will then open')
-    print(' several browser windows.')
-    ok = input('Continue (y/n)? ').strip().lower()
-    if ok not in ('y', 'yes'):
-        print('Halted')
-        sys.exit(1)
+print('This script is about to make several HTTP requests to convert')
+print(' links to PMR exposures into workspace links, and will then open')
+print(' several browser windows.')
+ok = input('Continue (y/n)? ').strip().lower()
+if ok not in ('y', 'yes'):
+    print('Halted')
+    sys.exit(1)
 
-    print('"Tag","Year added","Author"')
-    for model in models:
-        pmr = model.pmr_link()
-        if pmr is not None:
-            pmr = history_link(pmr)
-            webbrowser.open(pmr)
-            print(f'"{model.key}",20,""')
+print('"Tag","Year added","Author"')
+for model in models:
+    pmr = model.pmr_link()
+    if pmr is not None:
+        pmr = history_link(pmr)
+        webbrowser.open(pmr)
+        print(f'"{model.key}",20,""')
 

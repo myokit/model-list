@@ -1,47 +1,111 @@
 #!/usr/bin/env python
 #
-# Creates plots based on the model list and manually gathered PMR data.
+# Plots the number of models in PMR, and who added them
 #
+import colorsys
 import sys
 
-from shared import load_models, ParseError, print_parse_error
-
-if __name__ == '__main__':
-    try:
-        models = load_models()
-    except ParseError as e:
-        print_parse_error(e)
-        sys.exit(1)
-
-    n = len(models)
-    print('Syntax ok')
-    print('-' * 79)
-    print(f'{n} Models loaded')
-
-    def p(m, desc):
-        a = f'{m:3} ({m / n * 100:.1f}%) {desc}'
-        b = ' ' * (40 - len(a))
-        c = f'vs {n - m:3} ({(n - m) / n * 100:.1f}%)'
-        print(f'{a}{b}{c}')
+import numpy as np
+import matplotlib.pyplot as plt
 
 
-    n_code = 0
-    for m in models:
-        n_code += 1 if m.has_code() else 0
-    p(n_code, 'have code')
-
-    n_author = 0
-    for m in models:
-        n_author += 1 if m.has_author_provided_code() else 0
-    p(n_author, 'have author-provided code')
-
-    n_pmr = 0
-    for m in models:
-        n_pmr += 1 if m.on_pmr() else 0
-    p(n_pmr, 'are on PMR')
-
-    print('-' * 79)
+path = 'pmr-stats-20250918.csv'
+stacked = True
 
 
-    sys.exit(0)
+def lumen(color, scale):
+    """ Scale a color's lightness. """
+    h, l, s = colorsys.rgb_to_hls(*color)
+    return colorsys.hls_to_rgb(h, min(1, 1 - l * scale), s)
+
+
+# Load data
+rows = np.genfromtxt(path, delimiter=',', names=True, dtype=None)
+for row in rows:
+    # Chop off quotes
+    row[2] = row[2][1:-1]
+
+# Check types
+mtypes = ('Curator', 'Author', 'Third party')
+error = False
+for row in rows:
+    if row[2] not in mtypes:
+        print('Unknown type:', row)
+        error = True
+if error:
+    sys.exit(1)
+
+# Get years added, by type
+years = [row[1] for row in rows]
+y0, y1 = min(years), max(years) + 1
+years = np.arange(y0, y1)
+counts = [np.zeros(years.shape) for x in mtypes]
+for row in rows:
+    counts[mtypes.index(row[2])][row[1] - y0] += 1
+
+# Get total in db, per year
+totals = [np.cumsum(x) for x in counts]
+combined = np.sum(totals, axis=0, dtype=int)
+
+#
+# 1. Total
+#
+fig = plt.figure(figsize=(9, 4.1))
+ax = fig.add_subplot()
+ax.set_xlabel('Year added (approximate)')
+ax.set_ylabel('Total number of CCE models in PMR')
+if stacked:
+    alpha = 0.2
+    fig.subplots_adjust(0.065, 0.105, 0.99, 0.99)
+    ax.fill_between(years, combined, color='#e9e9e9')
+    ax.plot(years, combined, 'k')
+    ax.set_xlim(y0, y1 + 2)
+    ax.set_ylim(0, 110)
+else:
+    fig.subplots_adjust(0.065, 0.105, 0.98, 0.99)
+    ax.plot(years, combined)
+    ax.set_xlim(y0, y1)
+ax.text(y1 - 0.7, combined[-1], combined[-1], va='center')
+ax.spines[['right', 'top']].set_visible(False)
+fig.savefig('total-vs-pmr-date.png', dpi=120)
+fig.savefig('total-vs-pmr-date.svg')
+
+
+#
+# 2. Split per type
+#
+colors = plt.get_cmap('tab10').colors
+colors = [colors[i] for i in range(len(mtypes))]
+
+# Plot cumulative counts, stacked on top of each other
+fig = plt.figure(figsize=(9, 4.1))
+ax = fig.add_subplot()
+ax.set_xlabel('Year added (approximate)')
+ax.set_ylabel('Total number of CCE models in PMR')
+if stacked:
+    fig.subplots_adjust(0.065, 0.105, 0.99, 0.99)
+    zorders = 1 + np.arange(len(mtypes))
+    zorders = zorders[::-1]
+    lower = np.zeros(years.shape)
+    for author, count, color, zorder in zip(mtypes, totals, colors, zorders):
+        upper = lower + count
+        ax.fill_between(years, lower, upper, color=lumen(color, alpha))
+        ax.plot(years, upper, color=color, zorder=zorder)
+        ax.text(y1 - 0.7, upper[-1], author, va='center')
+        lower = upper
+    ax.set_xlim(y0, y1 + 2)
+    ax.set_ylim(0, 110)
+else:
+    fig.subplots_adjust(0.055, 0.105, 0.99, 0.99)
+    for author, count in zip(mtypes, totals):
+        ax.plot(years, count, label=author)
+    ax.set_xlim(y0, y1 + 2)
+    ax.set_ylim(0, 75)
+    for total, author in zip(totals, mtypes):
+        ax.text(y1 - 0.7, total[-1], mtypes[i], va='center')
+ax.spines[['right', 'top']].set_visible(False)
+fig.savefig('total-vs-pmr-date-by-author.png', dpi=120)
+fig.savefig('total-vs-pmr-date-by-author.svg')
+
+print('done')
 
