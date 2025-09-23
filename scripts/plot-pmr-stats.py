@@ -19,6 +19,12 @@ def lumen(color, scale):
     return colorsys.hls_to_rgb(h, min(1, 1 - l * scale), s)
 
 
+def save(fig, name):
+    print(f'Saving to {name}.png and .svg')
+    fig.savefig(f'{name}.png', dpi=120)
+    fig.savefig(f'{name}.svg')
+
+
 # Load data
 rows = np.genfromtxt(path, delimiter=',', names=True, dtype=None)
 for row in rows:
@@ -67,8 +73,7 @@ else:
     ax.set_xlim(y0, y1)
 ax.text(y1 - 0.7, combined[-1], combined[-1], va='center')
 ax.spines[['right', 'top']].set_visible(False)
-fig.savefig('total-vs-pmr-date.png', dpi=120)
-fig.savefig('total-vs-pmr-date.svg')
+save(fig, 'total-vs-pmr-date')
 
 
 #
@@ -104,8 +109,6 @@ else:
     for total, author in zip(totals, mtypes):
         ax.text(y1 - 0.7, total[-1], mtypes[i], va='center')
 ax.spines[['right', 'top']].set_visible(False)
-fig.savefig('total-vs-pmr-date-by-author.png', dpi=120)
-fig.savefig('total-vs-pmr-date-by-author.svg')
-
+save(fig, 'total-vs-pmr-date-by-author')
 print('done')
 

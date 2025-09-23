@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 #
-# Plots the code type models were published with, over time
+# Plots (1) the code type models were published with, over time and (2) the
+# fraction in PMR over time
 #
 import colorsys
 import sys
@@ -31,11 +32,20 @@ def lumen(color, scale):
     return colorsys.hls_to_rgb(h, min(1, 1 - l * scale), s)
 
 
+def save(fig, name):
+    print(f'Saving to {name}.png and .svg')
+    fig.savefig(f'{name}.png', dpi=120)
+    fig.savefig(f'{name}.svg')
+
+
+#
+# Plot code type accompanying publications
+#
 fig = plt.figure(figsize=(9, 4.6))
-fig.subplots_adjust(0.065, 0.095, 0.98, 0.985)
+fig.subplots_adjust(0.065, 0.095, 0.975, 0.985)
 ax = fig.add_subplot()
 ax.set_xlabel('Model publication date')
-ax.set_ylabel('Number of models published with code')
+ax.set_ylabel('Number of models published with code (lower bound)')
 
 # Get number of models published with each format, per year
 years = set([m.year for m in models])
@@ -76,6 +86,7 @@ if stacked:
         ax.fill_between(years, totals, upper, color=lumen(c, alpha))
         ax.plot(years, upper, label=format_codes[f], color=c, zorder=z)
     ax.legend(loc=(0.025, 0.4), frameon=False)
+    ax.set_ylim(0, 250)
 else:
     ax.plot(years, ncds, label='None', color=colors[0])
     for f, c in zip(keys, colors[1:]):
@@ -84,7 +95,37 @@ else:
 
 ax.set_xlim(2000, y1 - 1)
 ax.spines[['right', 'top']].set_visible(False)
-fig.savefig('code-type-vs-model-date.png', dpi=120)
-fig.savefig('code-type-vs-model-date.svg')
-print('done')
+save(fig, 'code-type-vs-model-date')
 
+
+#
+# Plot percentage in PMR
+#
+fig = plt.figure(figsize=(9, 4.1))
+fig.subplots_adjust(0.070, 0.105, 0.955, 0.985)
+ax = fig.add_subplot()
+ax.set_xlabel('Model publication date')
+ax.set_ylabel('Percentage of models in PMR (upper bound)')
+ax.secondary_yaxis('right')
+n_out, n_pmr = np.zeros(years.shape), np.zeros(years.shape)
+for m in models:
+    n_out[m.year - y0] += 1
+    n_pmr[m.year - y0] += (1 if m.in_pmr() else 0)
+n_out, n_pmr = np.cumsum(n_out), np.cumsum(n_pmr)
+
+lower = np.zeros(years.shape)
+perce = 100 * n_pmr / n_out
+upper = np.ones(years.shape) * 100
+
+colors, i = plt.get_cmap('tab10').colors, 3
+ax.fill_between(years, lower, perce, color=lumen(colors[i], .2))
+ax.fill_between(years, upper, perce, color='#eee')
+ax.plot(years, perce, color=colors[i])
+ax.set_xlim(y0, y1 - 1)
+ax.set_ylim(0, 101)
+
+ax.spines[['top']].set_visible(False)
+save(fig, 'percentage-in-pmr')
+ax.set_xlim(2000, y1 - 1)
+save(fig, 'percentage-in-pmr-zoom')
+print('done')
