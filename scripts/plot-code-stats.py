@@ -41,12 +41,6 @@ def save(fig, name):
 #
 # Plot code type accompanying publications
 #
-fig = plt.figure(figsize=(9, 4.6))
-fig.subplots_adjust(0.065, 0.095, 0.975, 0.985)
-ax = fig.add_subplot()
-ax.set_xlabel('Model publication date')
-ax.set_ylabel('Number of models published with code (lower bound)')
-
 # Get number of models published with each format, per year
 years = set([m.year for m in models])
 y0, y1 = min(years), max(years) + 1
@@ -62,40 +56,98 @@ for m in models:
 
 # Convert to cumulative sums
 sums = {k: np.cumsum(v) for k, v in counts.items()}
-ncds = np.cumsum(nocode)
+sums['none'] = np.cumsum(nocode)
+format_codes = dict(format_codes)
+format_codes['none'] = 'None'
+
+# Count total, before 'other' etc are added
+ntot = sum(v[-1] for v in sums.values())
 
 # Get formats, ordered by count
 keys = [x[0] for x in sorted(sums.items(), key=lambda x: -x[1][-1])]
 
-# Get a colour per format
+print({(k, int(v[-1])) for (k, v) in sums.items()})
+
+# Show at most npop?
+npop = 5
 colors = plt.get_cmap('tab10').colors
-colors = [colors[i] for i in range(len(keys) + 1)]
+if len(keys) > npop:
+    sums['other'] = np.copy(sums[keys[npop]])
+    for i in range(npop + 1, len(keys)):
+        sums['other'] += sums[keys[i]]
+    keys2 = [keys[i] for i in range(1 + npop)]
+    keys2[npop] = 'other'
+    format_codes['other'] = 'Other'
+print({(k, int(v[-1])) for (k, v) in sums.items()})
+
+#
+# 1. Show npop most used
+#
+fig = plt.figure(figsize=(9, 4.6))
+fig.subplots_adjust(0.065, 0.095, 0.94, 0.985)
+ax = fig.add_subplot()
+ax.set_xlabel('Model publication date')
+ax.set_ylabel('Number of models published with code (lower bound)')
+
+# Plot cumulative counts, stacked on top of each other. For most popular
+alpha = 0.2
+zorders = 1 + np.arange(len(keys2))
+zorders = zorders[::-1]
+colors = [colors[i] for i in range(len(keys2))]
 totals = np.zeros(years.shape)
-
-# Plot cumulative counts, stacked on top of each other
-if stacked:
-    alpha = 0.2
-    zorders = 1 + np.arange(len(keys) + 1)
-    zorders = zorders[::-1]
-    upper = totals + ncds
-    ax.fill_between(years, totals, upper, color=lumen(colors[0], alpha))
-    ax.plot(years, upper, label='None', color=colors[0], zorder=zorders[0])
-    for f, c, z in zip(keys, colors[1:], zorders[1:]):
-        totals = upper
-        upper = totals + sums[f]
-        ax.fill_between(years, totals, upper, color=lumen(c, alpha))
-        ax.plot(years, upper, label=format_codes[f], color=c, zorder=z)
-    ax.legend(loc=(0.025, 0.4), frameon=False)
-    ax.set_ylim(0, 250)
-else:
-    ax.plot(years, ncds, label='None', color=colors[0])
-    for f, c in zip(keys, colors[1:]):
-        ax.plot(years, sums[f], label=format_codes[f], color=c)
-    ax.legend(loc=(0.025, 0.5), frameon=False)
-
+for f, c, z in zip(keys2, colors, zorders):
+    upper = totals + sums[f]
+    ax.fill_between(years, totals, upper, color=lumen(c, alpha))
+    ax.plot(years, upper, label=format_codes[f], color=c, zorder=z)
+    totals = upper
+ax.legend(loc=(0.025, 0.4), frameon=False)
+ax.set_ylim(0, 261)
 ax.set_xlim(2000, y1 - 1)
+
+y = 0
+for f in keys2[:6]:
+    y += sums[f][-1]
+    p = 100 * sums[f][-1] / ntot
+    ax.text(y1 - 0.85, y, f'{p:.1f}%', va='center')
 ax.spines[['right', 'top']].set_visible(False)
 save(fig, 'code-type-vs-model-date')
+
+#
+# 2. Focus on lesser used formats
+#
+nskip = 3
+
+fig = plt.figure(figsize=(9, 4.6))
+fig.subplots_adjust(0.065, 0.095, 0.94, 0.985)
+ax = fig.add_subplot()
+ax.set_xlabel('Model publication date')
+ax.set_ylabel('Number of models published with code (lower bound)')
+
+keys = keys[nskip:]
+zorders = 1 + np.arange(len(keys))
+zorders = zorders[::-1]
+colors = plt.get_cmap('tab20').colors
+colors = colors[0::2] + colors[1::2]
+colors = [colors[i] for i in range(nskip, nskip + len(keys))]
+totals = np.zeros(years.shape)
+for f, c, z in zip(keys, colors, zorders):
+    upper = totals + sums[f]
+    ax.fill_between(years, totals, upper, color=lumen(c, alpha))
+    ax.plot(years, upper, label=format_codes[f], color=c, zorder=z)
+    totals = upper
+ax.legend(loc=(0.025, 0.4), frameon=False)
+ax.set_ylim(0, 46)
+ax.set_xlim(2000, y1 - 1)
+
+y = 0
+for f in keys:
+    y += sums[f][-1]
+    p = 100 * sums[f][-1] / ntot
+    ax.text(y1 - 0.95, y, f'{p:.1f}%', va='center')
+ax.spines[['right', 'top']].set_visible(False)
+save(fig, 'code-type-vs-model-date-zoom')
+
+
 
 
 #
