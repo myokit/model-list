@@ -53,6 +53,8 @@ Models are omitted if they contain spatial propagation, either in larger tissues
 Whether or not a modification counts as a "model" is entirely subjective.
 No strict criteria are used here, just try to make it useful.
 
+Typically _not_ including models with slight changes due to mutations.
+
 ### Sources
 Some papers with model lists or model comparison:
 - [Noble, Garny, Noble (2012) How the Hodgkin-Huxley equations inspired the Cardiac Physiome Project](https://doi.org/10.1113/jphysiol.2011.224238)
@@ -63,7 +65,7 @@ Some papers with model lists or model comparison:
 
 Online model repositories and lists:
 - [PMR (Physiome model repository), formerly the CellML model repository; category "Electrophysiology"](https://models.physiomeproject.org/electrophysiology)
-- [InSilicoCardiotox  Human Action Potential Models Repository](https://www.cs.ox.ac.uk/insilicocardiotox/model-repository)
+- [InSilicoCardiotox Human Action Potential Models Repository](https://www.cs.ox.ac.uk/insilicocardiotox/model-repository)
 
 A number of software packages are referenced because they contain reference implementations of models.
 - Oxsoft Heart (1984-1999) was a DOS program released by Denis Noble and his group, and contained Noble-group models in that period. It was succeded by COR (and then OpenCOR) and CellML. The Oxsoft models were all converted to CellML.
@@ -1213,6 +1215,12 @@ Base: [Grandi 2011](#2011-grandi-pandit-voigt-ha)
 Modifications:
 - Markov model of INa with drug block adapted from Grandi 2007 and Wagner 2009 & Moreno 2013
 
+## 2016 Park MV
+Base: [Bondarenko 2004](#2004-bondarenko-mv)
+| [Paper](https://doi.org/10.1038/ncomms12966) Park, Shekar, Fishman et al. (2016) Fhf2 gene deletion causes temperature-sensitive cardiac conduction failure
+
+In Myokit, with link to ModelDB but can't find code there.
+
 ## 2016 Passini HV
 Base: [O'Hara 2011](#2011-ohara-hv)
 | [Paper](https://doi.org/10.1016/j.yjmcc.2015.09.003) Passini, Minchole et al. Bueno-Orovio (2016) Mechanisms of Pro-Arrhythmic Abnormalities in Ventricular Repolarisation and Anti-Arrhythmic Therapies in Human Hypertrophic Cardiomyopathy
@@ -1296,6 +1304,10 @@ Known as: IKr-dynamic ORd model, original IKr-dyn ORd model
 Modifications:
 - New IKr model with drug trapping
 
+## 2017 Neef CV
+Base: [Heijman 2011](#2011-heijman-cv)
+| [Paper](https://doi.org/10.1007/s00210-017-1376-1) Neef, Heijman, et al., El-Armouche (2017) Chronic loss of inhibitor-1 diminishes cardiac RyR2 phosphorylation despite exaggerated CaMKII activity
+
 ## 2017 Ni HA
 Base: [Colman 2017](#2017-colman-ha)
 | [In Myokit repo](https://github.com/myokit/models/blob/main/c/ni-2017.mmt)
@@ -1317,6 +1329,11 @@ Base: [Morotti 2014](#2014-morotti-mv)
 Bits:
 - Myofilament contraction from Negroni 2015
 
+## 2017 Tomek CV
+Base: [Heijman 2011](#2011-heijman-cv)
+| [Original Myokit code](https://journals.physiology.org/doi/suppl/10.1152/ajpheart.00094.2017)
+| [Paper](https://doi.org/10.1152/ajpheart.00094.2017) Tomek, Rodriguez, Bub, Heijman (2017) Beta-adrenergic receptor stimulation inhibits proarrhythmic alternans in post-infarction border zone cardiomyocytes
+
 ## 2018 Bai HA
 Base: [Ten Tusscher 2006](#2006-ten-tusscher-hv)
 | [In Myokit repo](https://github.com/myokit/models/blob/main/c/bai-2018.mmt)
@@ -1329,6 +1346,12 @@ Known as: TPA
 Base: [Courtemanche 1998](#1998-courtemanche-ha), [Nygren 1998](#1998-nygren-ha), [Chang 2014](#2014-chang-ha)
 | [Original C++ code](https://github.com/michaelcolman/hAM_WL)
 | [Paper](https://doi.org/10.3389/fphys.2018.01211) Colman, Saxena, Kettlewell, Workman (2018) Description of the Human Atrial Action Potential Derived From a Single, Congruent Data Source; Novel Computational Models for Integrated Experimental-Numerical Study of Atrial Arrhythmia Mechanisms
+
+## 2018 Heijman HA
+Base: [Voigt-Heijman 2013](#2013-voigt-heijman-ha)
+| [Paper](https://doi.org/10.1016/j.ijcard.2017.12.050) Heijman, Kirchner, Dobrev et al. (2018) Muscarinic type-1 receptors contribute to IK,ACh in human atrial cardiomyocytes and are upregulated in patients with chronic atrial fibrillation
+
+Added IKAch model by Murakami et al.
 
 ## 2018 Koivumaki Hi
 Base: [Korhonen 2010](#2010-korhonen-md), [Paci 2015](#2015-paci-hi)
@@ -1387,10 +1410,24 @@ Modifications:
 - New ICaL formulation (from Passini 2012 CINC)
 - ...
 
+## 2020 Nesterova HA
+Base: [Courtemanche 1998](#1998-courtemanche-ha)
+| [Paper](https://doi.org/10.1051/bioconf/20202201025) Nesterova, Shmarko, Ushenin, Solovyova (2020) In-silico analysis of aging mechanisms of action potential remodeling in human atrial cardiomyocites
+
 ## 2020 Paci Hi
 Base: [Paci 2018](#2018-paci-hi)
 | [In Myokit repo](https://github.com/myokit/models/blob/main/c/paci-2020.mmt)
 | [Paper](https://doi.org/10.1016/j.bpj.2020.03.018) Paci, Passini et al., Entcheva (2020) All-Optical Electrophysiology Refines Populations of In Silico Human iPSC-CMs for Drug Evaluation
+
+## 2020 Park MV
+Base: [Park 2016](#2016-park-mv)
+| [Official Neuron code](https://github.com/ModelDBRepository/266818)
+| [Paper](https://doi.org/10.1161/circresaha.120.317349) Park, Shekhar et al., Fishman (2020) Ionic Mechanisms of Impulse Propagation Failure in the FHF2-Deficient Heart
+
+## 2020 Peper Hi
+Base: [Kernik 2019](#2019-kernik-hi)
+| [Original Myokit code](https://github.com/JordiHeijman/hIPSC-CM-CAV3)
+| [Paper](https://doi.org/10.1161/circresaha.119.316547) Peper, Kownatzki-Danger et al., Lehnart (2021) Caveolin3 Stabilizes McT1-Mediated Lactate-Proton Transport in Cardiomyocytes
 
 ## 2020 Sengul Ayan LV
 Base: [Jafri 1998](#1998-jafri-gv) but mostly new
@@ -1398,6 +1435,21 @@ Base: [Jafri 1998](#1998-jafri-gv) but mostly new
 
 Modifications:
 - 5 parameter reformulation of most currents
+
+## 2020 Sutanto HA
+Base: [Courtemanche 1998](#1998-courtemanche-ha)
+| [Original Myokit code](https://github.com/JordiHeijman/EthanolArrhythmogenesis)
+| [Paper](https://doi.org/10.1016/j.yjmcc.2020.07.007) Sutanto, Cluitmans et al., Heijman (2020) Acute effects of alcohol on cardiac  electrophysiology and arrhythmogenesis; Insights from multiscale in silico analyses
+
+## 2020 Sutanto HV
+Base: [Passini 2016](#2016-passini-hv)
+| [Original Myokit code](https://github.com/JordiHeijman/EthanolArrhythmogenesis)
+| [Paper](https://doi.org/10.1016/j.yjmcc.2020.07.007) Sutanto, Cluitmans et al., Heijman (2020) Acute effects of alcohol on cardiac  electrophysiology and arrhythmogenesis; Insights from multiscale in silico analyses
+
+## 2020 Sutanto CV
+Base: [Heijman 2011](#2011-heijman-cv)
+| [Original Myokit code](https://github.com/JordiHeijman/ChloroquineBARSEffect)
+| [Paper](https://doi.org/10.3389/fphys.2020.587709) Sutanto, Heijman (2020) Beta-Adrenergic Receptor Stimulation Limits the Cellular Proarrhythmic Effects of Chloroquine and Azithromycin
 
 ## 2020 Tomek HV
 Base: [Tomek 2019](#2019-tomek-hv)
@@ -1503,6 +1555,10 @@ Modifications:
 - Updated PKA signaling
 - Improved implementation of ODE calculation
 
+## 2021 Rokeah LV
+Base: [Gattoni 2016](#2016-gattoni-lv)
+| [Paper](https://doi.org/10.3390/math9202604) Rokeakh, Nesterova et al., Solovyova (2021) Anatomical Model of Rat Ventricles to Study Cardiac Arrhythmias under Infarction Injury
+
 ## 2022 Bartolucci HV
 Base: [Bartoluci 2020](#2020-bartolucci-hv)
 | [Paper](https://doi.org/10.3389/fphys.2022.906146) Bartolucci, Forouzandemehr, Severi, Paci (2022) A Novel In Silico Electromechanical Model of Human Ventricular Cardiomyocyte
@@ -1545,12 +1601,31 @@ Base: [Severi 2012](#2012-severi-rs)
 | [Original Matlab code](https://github.com/SHWeinberg/SAN_FeedbackModel)
 | [Paper](https://doi.org/10.1016/j.bpj.2023.03.024) Moise, Weinberg (2022) Emergent Electrical Activity, Tissue Heterogeneity, and Robustness in a Calcium Feedback Regulatory Model of the Sinoatrial Node
 
+## 2022 Sutanto HV
+Base: [Tomek 2019](#2019-tomek-hv)
+| [Original Myokit code](https://github.com/henrysutanto/Naringenin_electrophysAP)
+| [Paper](https://doi.org/10.3390/antiox11091672) Sutanto, Hertanto, Susilo, Wungu (2022) Grapefruit Flavonoid Naringenin Sex-Dependently Modulates Action Potential in an In Silico Human Ventricular Cardiomyocyte Model
+
 ## 2023 Buonocunto HV
 Base: [Tomek 2019](#2019-tomek-hv)
 | [Paper](https://doi.org/10.1113/JP284439) Buonocunto, Lyon et al. Lumens (2023) Electrophysiological effects of stretch-activated ion channels: a systematic computational characterization
 | [Original Matlab code](https://github.com/melaniabuonoc/Electrophysiological-effects-of-stretch-activated-ion-channels)
 
 Added three stretch-activated currents.
+
+## 2023 Fullterton HV
+Base: [Tomek 2019](#2019-tomek-hv)
+| [Original Myokit code](https://github.com/Christini-Lab/rrc-conductance-profile)
+| [Paper](https://doi.org/10.1152/ajpheart.00553.2023) Fullerton, Clark, Krogh-Madsen, Christini (2023) Optimization of a Cardiomyocyte Model Illuminates Role of Increased INaL in Repolarization Reserve
+
+Rescaled conductances to optimise repolarisation reserve.
+
+## 2023 Fullterton HA
+Base: [Grandi 2011](#2011-grandi-pandit-voigt-ha)
+| [Original Myokit code](https://github.com/Christini-Lab/rrc-conductance-profile)
+| [Paper](https://doi.org/10.1152/ajpheart.00553.2023) Fullerton, Clark, Krogh-Madsen, Christini (2023) Optimization of a Cardiomyocyte Model Illuminates Role of Increased INaL in Repolarization Reserve
+
+Rescaled conductances to optimise repolarisation reserve.
 
 ## 2023 Heijman HA
 Base: [Grandi 2011](#2011-grandi-pandit-voigt-ha)
@@ -1570,14 +1645,35 @@ Base: [Koivumaki-Korhonen 2011](#2011-koivumaki-korhonen-ha), Regazzoni 2020
 
 Known as: MBS2023
 
+## 2023 Meier HV
+Base: [O'Hara 2011](#2011-ohara-hv)
+| [Original Myokit code](https://github.com/HeijmanLab/IonChannelTraffickingModel)
+| [Paper](https://physoc.onlinelibrary.wiley.com/doi/10.1113/JP283976) Meier, Grundland et al., Heijman (2023) In silico analysis of the dynamic regulation of cardiac electrophysiology by Kv11.1 ion-channel trafficking
+
+Added Kv11.1 trafficking to O'Hara.
+
+## 2023 Nesterova LV
+Base: [Gattoni 2016](#2016-gattoni-lv)
+| [Original Myokit code](https://github.com/tatiannesterova/DRC)
+| [Paper](https://doi.org/10.3390/math11040874) Nesterova, Rokeakh, Solovyova, Panfilov (2023) Mathematical Modelling of Leptin-Induced Effects on Electrophysiological Properties of Rat Cardiomyocytes and Cardiac Arrhythmias
+
 ## 2023 Ni HA
 Base: [Morotti 2017](#2016-morotti-ha)
 | [Original C++ code](https://github.com/drgrandilab/Ni-et-al-2023-Human-Atrial-Signaling-Model)
 | [Paper](https://doi.org/10.1093/cvr/cvad118) Ni, Morotti et al., Grandi (2023) Integrative human atrial modelling unravels interactive PKA and CaMKII signalling as key determinants of atrial arrhythmogenesis
 
+## 2023 Seibertz Hi
+Base: [Kernik 2019](#2019-kernik-hi)
+| [Paper](https://doi.org/10.1007/s00395-022-00973-0) Seibertz, Sutanto et al., Voigt (2023) Electrophysiological and calcium-handling development during long-term culture of human-induced pluripotent stem cell-derived cardiomyocytes
+
 ## 2024 Bartolucci MN
 Base: [Marger 2011](#2011-marger-mn), [Kharche 2011](#2011-kharche-ms)
 | [Paper](https://doi.org/10.1113/JP285950) Bartolucci, Mesirca et al., Severi (2025) Computational modelling of mouse atrio ventricular node action potential and automaticity
+
+## 2024 Bodi HV
+Base: [O'Hara 2011](#2011-ohara-hv)
+| [Original Myokit code](https://github.com/HeijmanLab/SQT1-L-Carnitine)
+| [Paper](https://doi.org/10.1093/cvr/cvae149) Bodi, Mettke et al., Odening (2024) Beneficial normalization of cardiac repolarixation by carnitine in transgenic short QT syndrome type 1 rabbit models
 
 ## 2024 Botti Hi
 Base: [Paci 2020](#2020-paci-hi)
@@ -1637,9 +1733,18 @@ Base: [Fabbri 2017](#2017-fabbri-hs)
 | [Official CellML](https://models.physiomeproject.org/e/d14)
 | [Paper](https://doi.org/10.1113/JP287557) Linder, Stary, Bitay, Nagy, Loewe (2025) Sympathetic stimulation can compensate for hypocalcaemia-induced bradycardia in human and rabbit sinoatrial node cells
 
+## 2025 Meier HA
+Base: [Heijman 2023](#2023-heijman-ha), [Meier 2023](#2023-meier-hv)
+| [Original Myokit code](https://github.com/HeijmanLab/SK-trafficking)
+| [Paper](https://doi.org/10.1113/JP288659) Meier, Dobrev, Volders, Heijman (2025) Computational modelling of the pro- and antiarrhythmic effects of atrial high rate-dependent trafficking of small-conductance calcium-activated potassium channels
+
+## 2025 Nimani HV
+Base: [Bodi 2024](#2024-bodi-hv)
+| [Original Myokit code](https://github.com/HeijmanLab/SQT1-SUPREP)
+| [Paper](https://doi.org/10.1093/eurheartj/ehaf660) Nimani, Bains et al., Odening (2025) AAV9-Mediated KCNH2-Suppression-Replacement Gene Therapy in Transgenic Rabbit Models with Type 1 Short QT Syndrome
+
 ## 2025 Pikunov HA
 Base: [Maleckar 2009](#2009-maleckar-ha)
 | [Original C code](https://github.com/humanphysiologylab/models_ctypes/tree/main/src/model_ctypes/_maleckar_ical_ghk_tor)
 | [Paper](https://doi.org/10.1161/CIRCEP.125.013898) Pikunov, Syunyaev et al., Efimov (2025) Role of Structural Versus Cellular Remodeling in Atrial Arrhythmogenesis; Insights From Personalized Digital Twins
-
 

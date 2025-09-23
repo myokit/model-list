@@ -32,17 +32,19 @@ _struct = {
     'Original CellML': 'org_cellml',
     'Original C code': 'org_c',
     'Original C++ code': 'org_cpp',
+    'Original Delphi code': 'org_delphi',
     'Original Fortran code': 'org_fortran',
     'Original Matlab code': 'org_matlab',
-    'Original Delphi code': 'org_delphi',
-    'Original Visual Basic code': 'org_visbas',
-    'Original simBio code': 'org_simbio',
+    'Original Myokit code': 'org_myokit',
     'Original openCARP code': 'org_carp',
+    'Original simBio code': 'org_simbio',
+    'Original Visual Basic code': 'org_visbas',
 
     # Author-sanctioned code, e.g. CellML generated when writing the paper
     'Official CellML': 'off_cellml',
-    'Official simBio code': 'off_simbio',
     'Official C code': 'off_c',
+    'Official Neuron code': 'off_neuron',
+    'Official simBio code': 'off_simbio',
 
     # Updated code published by authors or others
     'Updated C++ code': 'upd_cpp',
@@ -63,6 +65,8 @@ format_codes = {
     'delphi': 'Delphi',
     'fortran': 'Fortran',
     'matlab': 'Matlab',
+    'myokit': 'Myokit',
+    'neuron': 'Neuron',
     'simbio': 'simBio',
     'visbas': 'Visual basic',
 }
@@ -86,18 +90,20 @@ class Model:
     myokit_repo = None
 
     off_cellml = None
-    off_simbio = None
     off_c = None
+    off_neuron = None
+    off_simbio = None
 
     org_cellml = None
     org_c = None
     org_cpp = None
+    org_carp = None
+    org_delphi = None
     org_fortran = None
     org_matlab = None
-    org_delphi = None
-    org_visbas = None
+    org_myokit = None
     org_simbio = None
-    org_carp = None
+    org_visbas = None
 
     upd_matlab = None
     upd_cpp = None
@@ -146,7 +152,7 @@ class Model:
         """
         return len(self.author_provided_formats()) > 0
 
-    def on_pmr(self):
+    def in_pmr(self):
         """
         Returns True if this model is available from PMR.
         """
