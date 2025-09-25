@@ -66,8 +66,6 @@ ntot = sum(v[-1] for v in sums.values())
 # Get formats, ordered by count
 keys = [x[0] for x in sorted(sums.items(), key=lambda x: -x[1][-1])]
 
-print({(k, int(v[-1])) for (k, v) in sums.items()})
-
 # Show at most npop?
 npop = 5
 colors = plt.get_cmap('tab10').colors
@@ -78,7 +76,6 @@ if len(keys) > npop:
     keys2 = [keys[i] for i in range(1 + npop)]
     keys2[npop] = 'other'
     format_codes['other'] = 'Other'
-print({(k, int(v[-1])) for (k, v) in sums.items()})
 
 #
 # 1. Show npop most used
@@ -87,7 +84,7 @@ fig = plt.figure(figsize=(9, 4.6))
 fig.subplots_adjust(0.065, 0.095, 0.94, 0.985)
 ax = fig.add_subplot()
 ax.set_xlabel('Model publication date')
-ax.set_ylabel('Number of models published with code (lower bound)')
+ax.set_ylabel('Number of models published (lower bound)')
 
 # Plot cumulative counts, stacked on top of each other. For most popular
 alpha = 0.2
@@ -110,7 +107,7 @@ for f in keys2[:6]:
     p = 100 * sums[f][-1] / ntot
     ax.text(y1 - 0.85, y, f'{p:.1f}%', va='center')
 ax.spines[['right', 'top']].set_visible(False)
-save(fig, 'code-type-vs-model-date')
+save(fig, 'format-vs-model-date')
 
 #
 # 2. Focus on lesser used formats
@@ -121,7 +118,7 @@ fig = plt.figure(figsize=(9, 4.6))
 fig.subplots_adjust(0.065, 0.095, 0.94, 0.985)
 ax = fig.add_subplot()
 ax.set_xlabel('Model publication date')
-ax.set_ylabel('Number of models published with code (lower bound)')
+ax.set_ylabel('Number of models published (lower bound)')
 
 keys = keys[nskip:]
 zorders = 1 + np.arange(len(keys))
@@ -145,9 +142,56 @@ for f in keys:
     p = 100 * sums[f][-1] / ntot
     ax.text(y1 - 0.95, y, f'{p:.1f}%', va='center')
 ax.spines[['right', 'top']].set_visible(False)
-save(fig, 'code-type-vs-model-date-zoom')
+save(fig, 'format-vs-model-date-zoom')
 
+#
+# 3. Relational vs procedural
+#
+pro, rel = np.zeros(years.shape), np.zeros(years.shape)
+keys = list(sums.keys())
+for key in keys:
+    if key in ('none', 'other'):
+        continue
+    elif key in ('cellml', 'myokit'):
+        rel += sums[key]
+    else:
+        pro += sums[key]
 
+show = {
+    'None': sums['none'],
+    'Procedural': pro,
+    'Relational': rel,
+}
+
+fig = plt.figure(figsize=(9, 4.6))
+fig.subplots_adjust(0.065, 0.095, 0.94, 0.985)
+ax = fig.add_subplot()
+ax.set_xlabel('Model publication date')
+ax.set_ylabel('Number of models published (lower bound)')
+
+keys = keys[nskip:]
+zorders = 1 + np.arange(len(keys))
+zorders = zorders[::-1]
+colors = plt.get_cmap('tab20').colors
+colors = colors[0::2] + colors[1::2]
+colors = [colors[i] for i in range(len(keys))]
+totals = np.zeros(years.shape)
+for k, s, c, z in zip(show.keys(), show.values(), colors, zorders):
+    upper = totals + s
+    ax.fill_between(years, totals, upper, color=lumen(c, alpha))
+    ax.plot(years, upper, label=k, color=c, zorder=z)
+    totals = upper
+ax.legend(loc=(0.025, 0.6), frameon=False)
+ax.set_ylim(0, 261)
+ax.set_xlim(2000, y1 - 1)
+
+y = 0
+for k, s in show.items():
+    y += s[-1]
+    p = 100 * s[-1] / ntot
+    ax.text(y1 - 0.95, y, f'{p:.1f}%', va='center')
+ax.spines[['right', 'top']].set_visible(False)
+save(fig, 'format-vs-model-date-type')
 
 
 #
