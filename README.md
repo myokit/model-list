@@ -1748,3 +1748,9 @@ Base: [Maleckar 2009](#2009-maleckar-ha)
 | [Original C code](https://github.com/humanphysiologylab/models_ctypes/tree/main/src/model_ctypes/_maleckar_ical_ghk_tor)
 | [Paper](https://doi.org/10.1161/CIRCEP.125.013898) Pikunov, Syunyaev et al., Efimov (2025) Role of Structural Versus Cellular Remodeling in Atrial Arrhythmogenesis; Insights From Personalized Digital Twins
 
+## 2025 Diagne Hi
+Base: [Paci 2020](#2020-paci-hi)
+| [Original Matlab code](https://github.com/KhadyDiagne/PRC-of-hiPSC-CM)
+| [Preprint](https://doi.org/10.1101/2025.09.24.678279) Diagne, Bury et al., Entcheva (2025) Phase resetting in human stem cell derived cardiomyocytes explains complex cardiac arrhythmias
+
+

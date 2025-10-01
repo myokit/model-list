@@ -97,7 +97,7 @@ for f, c, z in zip(keys2, colors, zorders):
     ax.fill_between(years, totals, upper, color=lumen(c, alpha))
     ax.plot(years, upper, label=format_codes[f], color=c, zorder=z)
     totals = upper
-ax.legend(loc=(0.025, 0.4), frameon=False)
+ax.legend(loc=(0.025, 0.4), frameon=False, reverse=True)
 ax.set_ylim(0, 261)
 ax.set_xlim(2000, y1 - 1)
 
@@ -132,7 +132,7 @@ for f, c, z in zip(keys, colors, zorders):
     ax.fill_between(years, totals, upper, color=lumen(c, alpha))
     ax.plot(years, upper, label=format_codes[f], color=c, zorder=z)
     totals = upper
-ax.legend(loc=(0.025, 0.4), frameon=False)
+ax.legend(loc=(0.025, 0.4), frameon=False, reverse=True)
 ax.set_ylim(0, 46)
 ax.set_xlim(2000, y1 - 1)
 
@@ -160,7 +160,7 @@ for key in keys:
 show = {
     'None': sums['none'],
     'Procedural': pro,
-    'Relational': rel,
+    'Declarative': rel,
 }
 
 fig = plt.figure(figsize=(9, 4.6))
@@ -181,7 +181,7 @@ for k, s, c, z in zip(show.keys(), show.values(), colors, zorders):
     ax.fill_between(years, totals, upper, color=lumen(c, alpha))
     ax.plot(years, upper, label=k, color=c, zorder=z)
     totals = upper
-ax.legend(loc=(0.025, 0.6), frameon=False)
+ax.legend(loc=(0.025, 0.6), frameon=False, reverse=True)
 ax.set_ylim(0, 261)
 ax.set_xlim(2000, y1 - 1)
 
