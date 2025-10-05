@@ -875,6 +875,10 @@ Base: [Hund 2008](#2008-hund-cv)
 Base: [Ten Tusscher 2004](#2004-ten-tusscher-hv)
 | [Paper](https://doi.org/10.1016/j.yjmcc.2008.12.002) Grandi, Pasqualini et al., Severi (2009) Theoretical investigation of action potential duration dependence on extracellular Ca in human cardiomyocytes
 
+## 2009 Sato RV
+Base: [Mahajan-Shiferaw 2008](#2008-mahajan-shiferaw-rv)
+| [Paper](https://doi.org/10.1073/pnas.0809148106) Sato, Xie et al., Qu (2009) Synchronization of chaotic early afterdepolarizations in the genesis of cardiac arrhythmias
+
 ## 2009 Inada mN
 Base: [Lindblad 1996](#1996-lindblad-ra), [Kurata 2002](#2002-kurata-rs)
 | [CellML reimplementation](https://models.physiomeproject.org/workspace/inada_2009)

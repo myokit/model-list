@@ -83,20 +83,20 @@ if len(keys) > npop:
 fig = plt.figure(figsize=(9, 4.6))
 fig.subplots_adjust(0.065, 0.095, 0.94, 0.985)
 ax = fig.add_subplot()
-ax.set_xlabel('Model publication date')
-ax.set_ylabel('Number of models published (lower bound)')
+ax.set_xlabel('Models published to date')
+ax.set_ylabel('Number with author-provided code (lower bound)')
 
 # Plot cumulative counts, stacked on top of each other. For most popular
 alpha = 0.2
 zorders = 1 + np.arange(len(keys2))
 zorders = zorders[::-1]
 colors = [colors[i] for i in range(len(keys2))]
-totals = np.zeros(years.shape)
+lower = np.zeros(years.shape)
 for f, c, z in zip(keys2, colors, zorders):
-    upper = totals + sums[f]
-    ax.fill_between(years, totals, upper, color=lumen(c, alpha))
+    upper = lower + sums[f]
+    ax.fill_between(years, lower, upper, color=lumen(c, alpha))
     ax.plot(years, upper, label=format_codes[f], color=c, zorder=z)
-    totals = upper
+    lower = upper
 ax.legend(loc=(0.025, 0.4), frameon=False, reverse=True)
 ax.set_ylim(0, 261)
 ax.set_xlim(2000, y1 - 1)
@@ -109,16 +109,51 @@ for f in keys2[:6]:
 ax.spines[['right', 'top']].set_visible(False)
 save(fig, 'format-vs-model-date')
 
+
 #
-# 2. Focus on lesser used formats
+# 2. Show as percentage
+#
+fig = plt.figure(figsize=(9, 4.6))
+fig.subplots_adjust(0.065, 0.095, 0.87, 0.985)
+ax = fig.add_subplot()
+ax.set_xlabel('Models published to date')
+ax.set_ylabel('Percentage with author-provided code (lower bound)')
+
+# Plot cumulative counts, stacked on top of each other. For most popular
+alpha = 0.2
+zorders = 1 + np.arange(len(keys2))
+zorders = zorders[::-1]
+colors = [colors[i] for i in range(len(keys2))]
+total = np.sum([sums[f] for f in keys2], axis=0) * 0.01
+lower = np.zeros(years.shape)
+for f, c, z in zip(keys2, colors, zorders):
+    upper = lower + sums[f]
+    ax.fill_between(years, lower / total, upper / total, color=lumen(c, alpha))
+    ax.plot(years, upper / total, label=format_codes[f], color=c, zorder=z)
+    lower = upper
+ax.set_ylim(0, 101)
+ax.set_xlim(2000, y1 - 1)
+
+y = 0
+for f in keys2[:6]:
+    p = 100 * sums[f][-1] / ntot
+    y += p
+    ax.text(y1 - 0.85, y, f'{f} ({p:.1f}%)', va='center')
+    ax.text(p, 1, 'Hello')
+ax.spines[['right', 'top']].set_visible(False)
+save(fig, 'format-vs-model-date-percentage')
+
+
+#
+# 3. Focus on lesser used formats
 #
 nskip = 3
 
 fig = plt.figure(figsize=(9, 4.6))
 fig.subplots_adjust(0.065, 0.095, 0.94, 0.985)
 ax = fig.add_subplot()
-ax.set_xlabel('Model publication date')
-ax.set_ylabel('Number of models published (lower bound)')
+ax.set_xlabel('Models published to date')
+ax.set_ylabel('Number with author-provided code (lower bound)')
 
 keys = keys[nskip:]
 zorders = 1 + np.arange(len(keys))
@@ -126,12 +161,12 @@ zorders = zorders[::-1]
 colors = plt.get_cmap('tab20').colors
 colors = colors[0::2] + colors[1::2]
 colors = [colors[i] for i in range(nskip, nskip + len(keys))]
-totals = np.zeros(years.shape)
+lower = np.zeros(years.shape)
 for f, c, z in zip(keys, colors, zorders):
-    upper = totals + sums[f]
-    ax.fill_between(years, totals, upper, color=lumen(c, alpha))
+    upper = lower + sums[f]
+    ax.fill_between(years, lower, upper, color=lumen(c, alpha))
     ax.plot(years, upper, label=format_codes[f], color=c, zorder=z)
-    totals = upper
+    lower = upper
 ax.legend(loc=(0.025, 0.4), frameon=False, reverse=True)
 ax.set_ylim(0, 46)
 ax.set_xlim(2000, y1 - 1)
@@ -140,12 +175,12 @@ y = 0
 for f in keys:
     y += sums[f][-1]
     p = 100 * sums[f][-1] / ntot
-    ax.text(y1 - 0.95, y, f'{p:.1f}%', va='center')
+    ax.text(y1 - 0.85, y, f'{p:.1f}%', va='center')
 ax.spines[['right', 'top']].set_visible(False)
 save(fig, 'format-vs-model-date-zoom')
 
 #
-# 3. Relational vs procedural
+# 4. Relational vs procedural
 #
 pro, rel = np.zeros(years.shape), np.zeros(years.shape)
 keys = list(sums.keys())
@@ -166,8 +201,8 @@ show = {
 fig = plt.figure(figsize=(9, 4.6))
 fig.subplots_adjust(0.065, 0.095, 0.94, 0.985)
 ax = fig.add_subplot()
-ax.set_xlabel('Model publication date')
-ax.set_ylabel('Number of models published (lower bound)')
+ax.set_xlabel('Models published to date')
+ax.set_ylabel('Number with author-provided code (lower bound)')
 
 keys = keys[nskip:]
 zorders = 1 + np.arange(len(keys))
@@ -175,12 +210,12 @@ zorders = zorders[::-1]
 colors = plt.get_cmap('tab20').colors
 colors = colors[0::2] + colors[1::2]
 colors = [colors[i] for i in range(len(keys))]
-totals = np.zeros(years.shape)
+lower = np.zeros(years.shape)
 for k, s, c, z in zip(show.keys(), show.values(), colors, zorders):
-    upper = totals + s
-    ax.fill_between(years, totals, upper, color=lumen(c, alpha))
+    upper = lower + s
+    ax.fill_between(years, lower, upper, color=lumen(c, alpha))
     ax.plot(years, upper, label=k, color=c, zorder=z)
-    totals = upper
+    lower = upper
 ax.legend(loc=(0.025, 0.6), frameon=False, reverse=True)
 ax.set_ylim(0, 261)
 ax.set_xlim(2000, y1 - 1)
@@ -189,19 +224,48 @@ y = 0
 for k, s in show.items():
     y += s[-1]
     p = 100 * s[-1] / ntot
-    ax.text(y1 - 0.95, y, f'{p:.1f}%', va='center')
+    ax.text(y1 - 0.85, y, f'{p:.1f}%', va='center')
 ax.spines[['right', 'top']].set_visible(False)
 save(fig, 'format-vs-model-date-type')
 
 
 #
-# Plot percentage in PMR
+# 5. Relational vs procedural - as a percentage
+#
+fig = plt.figure(figsize=(9, 4.6))
+fig.subplots_adjust(0.065, 0.095, 0.835, 0.985)
+ax = fig.add_subplot()
+ax.set_xlabel('Models published to date')
+ax.set_ylabel('Percentage with author-provided code (lower bound)')
+
+total = np.sum([s for s in show.values()], axis=0) * 0.01
+for k, s, c, z in zip(show.keys(), show.values(), colors, zorders):
+    ax.plot(years, s / total, label=k, color=c, zorder=z)
+    lower = upper
+
+ax.set_ylim(0, 101)
+ax.set_xlim(2000, y1 - 1)
+for k, s in show.items():
+    p = 100 * s[-1] / ntot
+    ax.text(y1 - 0.85, p, f'{k} ({p:.1f}%)', va='center')
+ax.spines[['right', 'top']].set_visible(False)
+save(fig, 'format-vs-model-date-type-percentage')
+
+ax.plot(years, sums['cellml'] / total, label='CellML', color=colors[2],
+        zorder=0, ls='--')
+p = 100 * sums['cellml'][-1] / ntot
+ax.text(y1 - 0.85, p, f'CellML ({p:.1f}%)', va='center')
+save(fig, 'format-vs-model-date-type-percentage-cellml')
+
+
+#
+# 6. Plot percentage in PMR - far larger number than published with CellML
 #
 fig = plt.figure(figsize=(9, 4.1))
 fig.subplots_adjust(0.070, 0.105, 0.955, 0.985)
 ax = fig.add_subplot()
-ax.set_xlabel('Model publication date')
-ax.set_ylabel('Percentage of models in PMR (upper bound)')
+ax.set_xlabel('Models published to date')
+ax.set_ylabel('Percentage in PMR (upper bound)')
 ax.secondary_yaxis('right')
 n_out, n_pmr = np.zeros(years.shape), np.zeros(years.shape)
 for m in models:
