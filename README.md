@@ -609,6 +609,7 @@ Base: [Puglisi 2001](#2001-puglisi-gv)
 
 ## 2004 Shannon RV
 Base: [Puglisi 2001](#2001-puglisi-gv)
+| [In Myokit repo](https://github.com/myokit/models/blob/main/c/shannon-2004.mmt)
 | [Original C code](https://web.archive.org/web/20060425184747/http://www.luhs.org/depts/physio/personal_pages/bers_d/index.html)
 | [Matlab reimplementation](https://github.com/drgrandilab/Shannon-et-al-2004-Rabbit-Ventricular-Model) by Grandi lab
 | [Matlab reimplementation](https://somapp.ucdmc.ucdavis.edu/pharmacology/bers/) by Bers lab
@@ -811,6 +812,7 @@ Base: [Kurata 2002](#2002-kurata-rs)
 
 ## 2008 Mahajan-Shiferaw RV
 Base: [Shannon 2004](#2004-shannon-rv)
+| [In Myokit repo](https://github.com/myokit/models/blob/main/c/mahajan-2008.mmt)
 | [CellML reimplementation](https://models.physiomeproject.org/exposure/a5586b72d07ce03fc40fc98ee846d7a5)
 | [Paper](https://doi.org/10.1529/biophysj.106.98160) Mahajan*, Shiferaw* et al., Weiss (2008) A Rabbit Ventricular Action Potential Model Replicating Cardiac Dynamics at Rapid Heart Rates
 
