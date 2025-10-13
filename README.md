@@ -1729,6 +1729,16 @@ Base: [Ten Tusscher 2004](#2004-ten-tusscher-hv)
 | [Official CellML](https://github.com/jfrodrig1971/Zebrafish)
 | [Paper](https://doi.org/10.1113/JP287624) Cestariolo, Long et al., Matas (2025) Mathematical model of the zebrafish ventricular cardiomyocyte action potential and calcium transient
 
+## 2025 Diagne Hi
+Base: [Paci 2020](#2020-paci-hi)
+| [Original Matlab code](https://github.com/KhadyDiagne/PRC-of-hiPSC-CM)
+| [Preprint](https://doi.org/10.1101/2025.09.24.678279) Diagne, Bury et al., Entcheva (2025) Phase resetting in human stem cell derived cardiomyocytes explains complex cardiac arrhythmias
+
+## 2025 Herrera HA
+Base: [Ni 2023](#2023-ni-ha)
+| [Paper](https://doi.org/10.1101/2025.08.18.670886) Herrera, Ni et al., Grandi (2025) Mechanistic insights into sex differences in atrial electrophysiology and arrhythmia vulnerability through sex-specific computational models
+| [Original Matlab code](https://github.com/drgrandilab/Herrera-et-al-2025-Sex-Specific-Human-Atrial-Model)
+
 ## 2025 Linder RS
 Base: [Severi 2012](#2012-severi-rs)
 | [Official CellML](https://models.physiomeproject.org/e/d14)
@@ -1753,10 +1763,5 @@ Base: [Bodi 2024](#2024-bodi-hv)
 Base: [Maleckar 2009](#2009-maleckar-ha)
 | [Original C code](https://github.com/humanphysiologylab/models_ctypes/tree/main/src/model_ctypes/_maleckar_ical_ghk_tor)
 | [Paper](https://doi.org/10.1161/CIRCEP.125.013898) Pikunov, Syunyaev et al., Efimov (2025) Role of Structural Versus Cellular Remodeling in Atrial Arrhythmogenesis; Insights From Personalized Digital Twins
-
-## 2025 Diagne Hi
-Base: [Paci 2020](#2020-paci-hi)
-| [Original Matlab code](https://github.com/KhadyDiagne/PRC-of-hiPSC-CM)
-| [Preprint](https://doi.org/10.1101/2025.09.24.678279) Diagne, Bury et al., Entcheva (2025) Phase resetting in human stem cell derived cardiomyocytes explains complex cardiac arrhythmias
 
 

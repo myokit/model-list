@@ -81,7 +81,7 @@ if len(keys) > npop:
 # 1. Show npop most used
 #
 fig = plt.figure(figsize=(9, 4.6))
-fig.subplots_adjust(0.065, 0.095, 0.94, 0.985)
+fig.subplots_adjust(0.065, 0.095, 0.94, 0.975)
 ax = fig.add_subplot()
 ax.set_xlabel('Models published to date')
 ax.set_ylabel('Number with author-provided code (lower bound)')
@@ -114,7 +114,7 @@ save(fig, 'format-vs-model-date')
 # 2. Show as percentage
 #
 fig = plt.figure(figsize=(9, 4.6))
-fig.subplots_adjust(0.065, 0.095, 0.87, 0.985)
+fig.subplots_adjust(0.065, 0.095, 0.87, 0.975)
 ax = fig.add_subplot()
 ax.set_xlabel('Models published to date')
 ax.set_ylabel('Percentage with author-provided code (lower bound)')
@@ -150,7 +150,7 @@ save(fig, 'format-vs-model-date-percentage')
 nskip = 3
 
 fig = plt.figure(figsize=(9, 4.6))
-fig.subplots_adjust(0.065, 0.095, 0.94, 0.985)
+fig.subplots_adjust(0.065, 0.095, 0.94, 0.975)
 ax = fig.add_subplot()
 ax.set_xlabel('Models published to date')
 ax.set_ylabel('Number with author-provided code (lower bound)')
@@ -199,7 +199,7 @@ show = {
 }
 
 fig = plt.figure(figsize=(9, 4.6))
-fig.subplots_adjust(0.065, 0.095, 0.94, 0.985)
+fig.subplots_adjust(0.065, 0.095, 0.94, 0.975)
 ax = fig.add_subplot()
 ax.set_xlabel('Models published to date')
 ax.set_ylabel('Number with author-provided code (lower bound)')
@@ -233,7 +233,7 @@ save(fig, 'format-vs-model-date-type')
 # 5. Relational vs procedural - as a percentage
 #
 fig = plt.figure(figsize=(9, 4.6))
-fig.subplots_adjust(0.065, 0.095, 0.835, 0.985)
+fig.subplots_adjust(0.065, 0.095, 0.835, 0.975)
 ax = fig.add_subplot()
 ax.set_xlabel('Models published to date')
 ax.set_ylabel('Percentage with author-provided code (lower bound)')
