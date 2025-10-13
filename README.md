@@ -1,7 +1,7 @@
 # Cardiac myocyte action potential models
 [![Syntax check](https://github.com/myokit/model-list/actions/workflows/syntax-check.yml/badge.svg)](https://github.com/myokit/model-list/actions/workflows/syntax-check.yml)
 
-This is a list of published action potential models of cardiac myocytes (or small preparations, for older models).
+This is a tenative list of published action potential models of cardiac myocytes (or small preparations, for older models).
 It does not include reduced models, or models with spatial variation beyond a handful of compartmens (so no calcium release units etc).
 
 ### Key
