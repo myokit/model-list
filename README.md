@@ -380,6 +380,12 @@ Base: [Zeng 1995](#1995-zeng-gv)
 Modifications:
 - New (baseline and mutated) INa model
 
+## 1999 Courtemanche HA
+Base: [Courtemanche 1998](#1998-courtemanche-ha)
+| [Paper](https://doi.org/10.1016/s0008-6363(99)00034-6) Courtemanche, Ramirez, Nattel (1999) Ionic targets for drug therapy and atrial fibrillation-induced electrical remodeling; insights from a mathematical model
+
+Rescales the 1998 model.
+
 ## 1999 Demir RS
 Base: [Demir 1994](#1994-demir-rs)
 | [CellML reimplementation](https://models.physiomeproject.org/exposure/32c9e9739454b40b5ba2d9cabb1fd079)
@@ -1352,6 +1358,12 @@ Known as: TPA
 Base: [Courtemanche 1998](#1998-courtemanche-ha), [Nygren 1998](#1998-nygren-ha), [Chang 2014](#2014-chang-ha)
 | [Original C++ code](https://github.com/michaelcolman/hAM_WL)
 | [Paper](https://doi.org/10.3389/fphys.2018.01211) Colman, Saxena, Kettlewell, Workman (2018) Description of the Human Atrial Action Potential Derived From a Single, Congruent Data Source; Novel Computational Models for Integrated Experimental-Numerical Study of Atrial Arrhythmia Mechanisms
+
+## 2018 De Coster HA
+Base: [Courtemanche 1998](#1998-courtemanche-ha), [Courtemanche 1999](#1999-courtemanche-ha)
+| [Paper](https://doi.org/10.3389/fphys.2018.01381) De Coster, Claus et al., Panfilov (2018) Myocyte Remodeling Due to Fibro-Fatty Infiltrations Influences Arrhythmogenicity
+
+Rescales the 1998 and 1999 Courtemanche models.
 
 ## 2018 Heijman HA
 Base: [Voigt-Heijman 2013](#2013-voigt-heijman-ha)
