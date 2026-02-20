@@ -45,5 +45,7 @@ This reveals a steady increase in declarative formats
 
 For this data set, we can also plot the percentage of models _per year_ published with either procedural or declarative code
 
-![format-vs-model-data-type-percentage](format-vs-model-date-type-percentage.svg)
+![format-vs-model-data-type-percentage](format-vs-model-date-type-percentage-cellml.svg)
+
+This shows that the percentage of models published with declarative, more reusable code, is on the rise, with the most recent increases driven mostly by Myokit.
 
