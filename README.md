@@ -1777,3 +1777,9 @@ Base: [Maleckar 2009](#2009-maleckar-ha)
 | [Paper](https://doi.org/10.1161/CIRCEP.125.013898) Pikunov, Syunyaev et al., Efimov (2025) Role of Structural Versus Cellular Remodeling in Atrial Arrhythmogenesis; Insights From Personalized Digital Twins
 
 
+
+
+[HTML] A model for the human fetal ventricular myocyte electrophysiology
+A Avezzú, S Longobardi, A Alvarez-Laviada, F Schultz… - PLOS Computational …, 2026
+Fetal cardiac arrhythmias can lead to stillbirth, but direct studies on the human fetal
+heart are challenging. To
