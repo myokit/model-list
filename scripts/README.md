@@ -1,4 +1,4 @@
-# Figures
+# Cardiac myocyte action potential models and author-provided code
 
 Based on the model list (see [here](../README.md) for details of model selection), we can create graphs showing the number of models published over time and the formats the code was published in (if any).
 
@@ -7,6 +7,12 @@ The scripts and their output are included here.
 - `check-syntax.py` interprets the model list, turning it into structured data, and verifying that the "syntax" of the model list is correct.
 - `show-stats.py` uses this data to print statistics in the terminal
 - `plot-code-stats.py` creates the figures shown below.
+
+We focus here on _author provided code_, which we define as either
+
+1. Code included as electronic supplement with the original paper (_not_ printed equations)
+2. Code published online and linked to in the original paper
+3. Code published after the paper, provided by the paper authors or members of the same group.
 
 ## Number of publications with author-provided code
 
