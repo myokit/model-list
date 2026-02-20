@@ -1,6 +1,6 @@
 # Cardiac myocyte action potential models and author-provided code
 
-Based on the model list (see [here](../README.md) for details of model selection), we can create graphs showing the number of models published over time and the formats the code was published in (if any).
+Based on the [model list in this repository](../README.md), we can create graphs showing the number of models published over time and the formats the code was published in (if any).
 
 The scripts and their output are included here.
 
