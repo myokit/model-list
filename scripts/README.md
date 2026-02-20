@@ -45,7 +45,7 @@ This reveals a steady increase in declarative formats
 
 ![format-vs-model-data-type](format-vs-model-date-type.svg)
 
-For this data set, we can also plot the percentage of models _per year_ published with either procedural or declarative code
+For this data set, we can also plot the cumulative percentage _over time_:
 
 ![format-vs-model-data-type-percentage](format-vs-model-date-type-percentage-cellml.svg)
 
