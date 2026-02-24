@@ -23,10 +23,9 @@ The figure below shows the cumulative number of models with author-provided code
 ![format-vs-model-data](format-vs-model-date.svg)
 
 As this is based on the manually compiled list, the raw numbers on the left y-axis should be interpreted as a lower bound.
-Once a model is known, a targetted search for accompanying code was performed (looking in papers, lab websites, model repositories, and search engines), so that the percentages on the right y-axis are most likely a good approximation.
+Once a model is known, a targeted search for accompanying code can be performed (looking in papers, lab websites, model repositories, and search engines), so that the percentages on the right y-axis are reasonable approximations.
 
-Another caveat is that code may have been published in other ways, e.g. mailed or emailed before online dissemination became the norm, or may have been removed since online publication.
-For this reason, we chose 2000 as the earliest included date.
+The earliest included date is 2000, as code sharing before this time was likely by mail or other non-online forms.
 
 The "other" category can be split up to reveal the smaller (less than 5%) players:
 
@@ -37,6 +36,13 @@ Note that C and C++ combined make up 5.7% here, and most of the published C++ mo
 Although **these graphs clearly show the number of models without published code is growing steadily**, some positive developments can be seen if we look purely at _percentages_:
 
 ![format-vs-model-data-zoom](format-vs-model-date-percentage.svg)
+
+This shows that the total (cumulative) percentage of models without code is shrinking.
+
+Another view of the same data is shown below, where we plot the percentage of models published with a certain code type in a period of five years.
+
+![format-per-five-years](format-per-five-years.svg)
+
 
 ## Code type
 
