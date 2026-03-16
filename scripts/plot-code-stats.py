@@ -246,6 +246,11 @@ for year in np.arange(1960, 2025, 5):
         ax.pie(ys, colors=colors, center=(year + 2.5, 0), radius=2.3,
                autopct=p)
     ax.text(year + 2.5, -3, f'{year}-{year + 5}', ha='center')
+    print(f'{year} to {year + 5}: {np.sum(ys):.0f} model(s)')
+print('Last period:')
+for k, y in zip(keys2, ys):
+    print(f'{k}: {y:.0f} ({100 * y / np.sum(ys):.1f}%)')
+
 
 ax.set_xlim(2001.5, 2022)
 ax.set_ylim(-2.4, 2.7)
