@@ -20,7 +20,7 @@ Ordering is year, then first author alphabetically.
 - N AV node
 - e embryonic stem cell
 - i induced pluripotent stem cell
-- d Developing cardiomyocyte, neonatal, embryonic
+- d Developing cardiomyocyte, neonatal, embryonic, fetal
 
 **Species**
 - C Canine
@@ -1783,10 +1783,16 @@ Base: [Maleckar 2009](#2009-maleckar-ha)
 | [Original C code](https://github.com/humanphysiologylab/models_ctypes/tree/main/src/model_ctypes/_maleckar_ical_ghk_tor)
 | [Paper](https://doi.org/10.1161/CIRCEP.125.013898) Pikunov, Syunyaev et al., Efimov (2025) Role of Structural Versus Cellular Remodeling in Atrial Arrhythmogenesis; Insights From Personalized Digital Twins
 
+## 2026 Avezzu Hd
+Base: [Ten Tusscher 2006](#2006-ten-tusscher-hv)
+| [Official CellML](https://models.physiomeproject.org/workspace/d90)
+| [Paper](https://doi.org/10.1371/journal.pcbi.1013889) Avezzu, Longobardi et al., Niederer (2026) A model for the human fetal ventricular myocyte electrophysiology
 
+## 2026 Simone Hi
+Base: [Paci 2020](#2020-paci-hi)
+| [Official CellML](https://models.cellml.org/workspace/d92)
+| [Paper](https://doi.org/10.1038/s41598-026-37707-4) Simone, Trancuccio et al., Santiago (2026) A novel computational model of human iPSC-derived ventricular myocytes with improved L-type calcium current for application to Timothy syndrome
 
+Modifications:
+- Modified L-type calcium current
 
-[HTML] A model for the human fetal ventricular myocyte electrophysiology
-A Avezzú, S Longobardi, A Alvarez-Laviada, F Schultz… - PLOS Computational …, 2026
-Fetal cardiac arrhythmias can lead to stillbirth, but direct studies on the human fetal
-heart are challenging. To
