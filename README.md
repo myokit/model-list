@@ -1622,6 +1622,10 @@ Base: [Severi 2012](#2012-severi-rs)
 | [Original Matlab code](https://github.com/SHWeinberg/SAN_FeedbackModel)
 | [Paper](https://doi.org/10.1016/j.bpj.2023.03.024) Moise, Weinberg (2022) Emergent Electrical Activity, Tissue Heterogeneity, and Robustness in a Calcium Feedback Regulatory Model of the Sinoatrial Node
 
+## 2022 Peris-Yague PA
+Base: [Courtemanche 1998](#1998-courtemanche-ha)
+| [Paper](https://doi.org/10.3389/fphys.2022.812535) Peris-Yague, Rubio et al., Majumder (2022) A Mathematical Model for Electrical Activity in Pig Atrial Tissue
+
 ## 2022 Sutanto HV
 Base: [Tomek 2019](#2019-tomek-hv)
 | [Original Myokit code](https://github.com/henrysutanto/Naringenin_electrophysAP)
