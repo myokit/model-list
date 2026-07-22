@@ -1790,7 +1790,7 @@ Base: [Ten Tusscher 2006](#2006-ten-tusscher-hv)
 
 ## 2026 Simone Hi
 Base: [Paci 2020](#2020-paci-hi)
-| [Official CellML](https://models.cellml.org/workspace/d92)
+| [Official CellML](https://models.physiomeproject.org/workspace/d92)
 | [Paper](https://doi.org/10.1038/s41598-026-37707-4) Simone, Trancuccio et al., Santiago (2026) A novel computational model of human iPSC-derived ventricular myocytes with improved L-type calcium current for application to Timothy syndrome
 
 Modifications:
