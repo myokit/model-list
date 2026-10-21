@@ -124,6 +124,7 @@ Some models with other features:
 
 ## 1962 Noble mPf
 Base: HH1952
+| [In Myokit repo](https://github.com/myokit/models/blob/main/c/noble-1962.mmt)
 | [CellML reimplementation](https://models.physiomeproject.org/e/2a6)
 | [Paper](https://doi.org/10.1113/jphysiol.1962.sp006849) Noble (1962) A Modification of the Hodgkin-Huxley Equations Applicable to Purkinje Fibre Action and Pacemaker Potentials
 
@@ -135,6 +136,7 @@ Note: In german. Can't find it online
 
 ## 1975 McAllister mPf
 Base: [Noble 1962](#1962-noble-mpf)
+| [In Myokit repo](https://github.com/myokit/models/blob/main/c/mcallister-1975.mmt)
 | [CellML reimplementation](https://models.physiomeproject.org/exposure/60e23c3228a3e455699846704006a8fe)
 | [Paper](https://doi.org/10.1113/jphysiol.1975.sp011080) McAllister, Noble, Tsien (1975) Reconstruction of the electrical activity of cardiac Purkinje fibres
 
