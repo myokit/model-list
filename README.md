@@ -182,6 +182,7 @@ Note: This is an adaptation of the DiFrancesco 1985 model, but was published ear
 
 ## 1985 DiFrancesco mPf
 Base: [McAllister 1975](#1975-mcallister-mpf)
+| [In Myokit repo](https://github.com/myokit/models/blob/main/c/difrancesco-1985.mmt)
 | [CellML reimplementation](https://models.physiomeproject.org/exposure/91d93b61d7da56b6baf1f0c4d88ecd77)
 | [Paper](https://doi.org/10.1098/rstb.1985.0001) DiFrancesco, Noble (1985) A Model of the Cardiac Electrical Activity Incorporating Ionic Pumps and Concentration Changes
 
@@ -189,6 +190,7 @@ Known as: DiFrancesco-Noble model
 
 Bits:
 - INaK new formulation
+- Ionic concentrations, including SR and external "cleft" space
 
 ## 1985 Reiner RSf
 Base: [Bristow 1982](#1982-bristow-rsf)
