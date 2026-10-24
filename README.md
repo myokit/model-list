@@ -187,6 +187,7 @@ Base: [McAllister 1975](#1975-mcallister-mpf)
 | [Paper](https://doi.org/10.1098/rstb.1985.0001) DiFrancesco, Noble (1985) A Model of the Cardiac Electrical Activity Incorporating Ionic Pumps and Concentration Changes
 
 Known as: DiFrancesco-Noble model
+Errata are given in appendix to Earm 1990.
 
 Bits:
 - INaK new formulation
@@ -237,6 +238,8 @@ Base: [Hilgemann 1987](#1987-hilgemann-raf)
 | [Paper](https://doi.org/10.1098/rspb.1990.0028) Earm, Noble (1990) A model of the single atrial cell; relation between calcium current and calcium release
 
 Code for this paper is inside "Oxsoft Heart"
+
+Contains an appendix with a (non-comprehensive) list of errata for DiFrancesco 1985
 
 ## 1990a Rasmusson FS
 Base: [DiFrancesco 1985](#1985-difrancesco-mpf), but mostly new
@@ -575,13 +578,17 @@ Base: [Luo 1994](#1994-luo-gv), but many new formulations
 | [Paper](https://doi.org/10.1152/ajpheart.00185.2003) Bondarenko, Szigeti et al., Rasmusson (2004) Computer model of action potential of mouse ventricular myocytes
 
 ## 2004 Hund CV
-Base: [Hund 2001](#2001-hund-gv) (arguably, most of the formulations are new, but the supplement is written in a way that strongly suggests this model was based on LRd2).
+Base: [Hund 2001](#2001-hund-gv), [Kneller 2002](#2002-kneller-ca)
 | [Updated Matlab code](https://rudylab.wustl.edu/code-downloads/)
 | [Updated C++ code](https://rudylab.wustl.edu/code-downloads/)
 | [CellML reimplementation](https://models.physiomeproject.org/exposure/f4b7120aa512c7f5e7a0664abcee3e8b)
 | [Paper](https://doi.org/10.1161/01.cir.0000147231.69595.d3) Hund, Rudy (2004) Rate Dependence and Regulation of Action Potential and Calcium Transient in a Canine Cardiac Ventricular Cell Model
 
 Known as: HRd
+
+Provenance:
+- Many formulations are new, but the supplement is written in a way that strongly suggests this model was based on LRd.
+- The chloride homeostasis builds on Kneller 2002.
 
 Bits:
 - CaMKII from Hanson et al 1994
@@ -765,6 +772,13 @@ Modifications:
 
 ## 2007 Livshitz CV
 Base: [Hund 2004](#2004-hund-cv)
+| [Original Matlab code](https://rudylab.wustl.edu/code-downloads/)
+| [Paper](https://doi.org/10.1152/ajpheart.01347.2006) Livshitz, Rudy (2007) Regulation of Ca and electrical alternans in cardiac myocytes; role of CAMKII and repolarizing currents
+
+Note that the CellML and Myokit files associated with this publication describe the Guinea Pig version, not this dog version.
+
+## 2007 Livshitz GV
+Base: [Faber 2000](#2000-faber-gv)
 | [In Myokit repo](https://github.com/myokit/models/blob/main/c/livshitz-2007.mmt)
 | [Original Matlab code](https://rudylab.wustl.edu/code-downloads/)
 | [CellML reimplementation](https://models.physiomeproject.org/exposure/dedfcd1a135ddb59e9d979ec1376a44f)
@@ -1401,7 +1415,7 @@ Base: [Shannon 2004](#2004-shannon-rv), [Ten Tusscher 2004](#2004-ten-tusscher-h
 | [Paper](https://doi.org/10.1113/jp277724) Kernik, Morotti et al., Clancy (2019) A computational model of induced pluripotent stem‐cell derived cardiomyocytes incorporating experimental variability from multiple data sources
 
 ## 2019 Tomek HV
-Base: [O'Hara 2011](#2011-ohara-hv)
+Base: [O'Hara 2011](#2011-ohara-hv), [Grandi 2010](#2010-grandi-hv)
 | [Original Matlab code](https://github.com/jtmff/torord/commit/4ffab13b48f0923d38b0315f26be466a6fad8b70)
 | [Official CellML](https://models.physiomeproject.org/workspace/5e1)
 | [Paper](https://doi.org/10.7554/elife.48890) Tomek, Bueno-Orovio et al., Rodriguez (2019) Development, calibration, and validation of a novel human ventricular myocyte model in health, disease, and drug block
@@ -1687,7 +1701,7 @@ Base: [Gattoni 2016](#2016-gattoni-lv)
 | [Paper](https://doi.org/10.3390/math11040874) Nesterova, Rokeakh, Solovyova, Panfilov (2023) Mathematical Modelling of Leptin-Induced Effects on Electrophysiological Properties of Rat Cardiomyocytes and Cardiac Arrhythmias
 
 ## 2023 Ni HA
-Base: [Morotti 2017](#2016-morotti-ha)
+Base: [Morotti 2016](#2016-morotti-ha)
 | [Original C++ code](https://github.com/drgrandilab/Ni-et-al-2023-Human-Atrial-Signaling-Model)
 | [Paper](https://doi.org/10.1093/cvr/cvad118) Ni, Morotti et al., Grandi (2023) Integrative human atrial modelling unravels interactive PKA and CaMKII signalling as key determinants of atrial arrhythmogenesis
 
