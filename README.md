@@ -671,7 +671,7 @@ Base: [Michailova 2001](#2001-michailova-cv)
 | [CellML reimplementation](https://models.physiomeproject.org/exposure/720f5c67a03d513abfd43fd0027c9e41)
 | [Paper](https://doi.org/10.1529/biophysj.104.046284) Michailova, Saucerman, Belik, McCulloch (2005) Modeling Regulation of Cardiac KATP and L-type Ca2 Currents by ATP, ADP, and Mg2
 
-## 2005 Shannon
+## 2005 Shannon RV
 Base: [Shannon 2004](#2004-shannon-rv)
 | [Paper](https://doi.org/10.1529/biophysj.105.068734) Shannon, Wang, Bers (2005) Regulation of Cardiac Sarcoplasmic Reticulum Ca Release by Luminal Ca and Altered Gating Assessed with a Mathematical Model
 
