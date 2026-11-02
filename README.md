@@ -671,6 +671,13 @@ Base: [Michailova 2001](#2001-michailova-cv)
 | [CellML reimplementation](https://models.physiomeproject.org/exposure/720f5c67a03d513abfd43fd0027c9e41)
 | [Paper](https://doi.org/10.1529/biophysj.104.046284) Michailova, Saucerman, Belik, McCulloch (2005) Modeling Regulation of Cardiac KATP and L-type Ca2 Currents by ATP, ADP, and Mg2
 
+## 2005 Shannon
+Base: [Shannon 2004](#2004-shannon-rv)
+| [Paper](https://doi.org/10.1529/biophysj.105.068734) Shannon, Wang, Bers (2005) Regulation of Cardiac Sarcoplasmic Reticulum Ca Release by Luminal Ca and Altered Gating Assessed with a Mathematical Model
+
+Changes IKs and ICa.
+Adds ICFTR (IClPKA). 
+ 
 ## 2006 Cortassa GV
 Base: [Rice 2000](#2000-rice-gv)
 | [CellML reimplementation](https://models.physiomeproject.org/e/1e)
@@ -678,6 +685,14 @@ Base: [Rice 2000](#2000-rice-gv)
 
 Modifications:
 - Cortassa 2003 metabolism model
+
+## 2006 Crampin GV
+Base: [Hund 2001](#2001-hund-gv)
+| [Paper](https://doi.org/10.1529/biophysj.105.070557) Crampin, Smith (2006) A dynamic model of excitation-contraction coupling during acidosis in cardiac ventricular myocytes
+
+Major reformulations and addition of acid transporters, Na-HCO3 cotransporter, Na-H exchanger, Cl-OH exchanger, and Cl-HCO3 exhanger.
+
+Has pH regulation.
 
 ## 2006 Greenstein CV
 Base: [Greenstein 2000](#2000-greenstein-cv) (via Greenstein 2002 local control model)
@@ -785,7 +800,7 @@ Base: [Faber 2000](#2000-faber-gv)
 | [Paper](https://doi.org/10.1152/ajpheart.01347.2006) Livshitz, Rudy (2007) Regulation of Ca and electrical alternans in cardiac myocytes; role of CAMKII and repolarizing currents
 
 ## 2007 Niederer LV
-Base: [Pandit 2001](#2001-pandit-lv)
+Base: [Pandit 2001](#2001-pandit-lv), [Crampin 2006](#2006-crampin-gv)
 | [CellML reimplementation](https://models.physiomeproject.org/exposure/59a44249dec83576d97fd3fce46ec5f9)
 | [Paper](https://doi.org/10.1529/biophysj.106.095463) Niederer, Smith (2007) A Mathematical Model of the Slow Force Response to Stretch in Rat Ventricular Myocytes
 
@@ -805,7 +820,7 @@ Modifications:
 
 ## 2008 Benson CV
 Base: [Hund 2004](#2004-hund-cv)
-| [CellML reimplementation](https://models.physiomeproject.org/workspace/2e3)
+| [CellML reimplementation](https://models.physiomeproject.org/workspace/2e3) (with help from original authors)
 | [Paper](https://doi.org/10.1016/j.pbiomolbio.2007.08.002) Benson, Aslanidi, Zhang, Holden (2008) The canine virtual ventricular wall; A platform for dissecting pharmacological effects on propagation and arrhythmogenesis
 
 ## 2008 Fink HV
@@ -1143,7 +1158,7 @@ Base: [Maltsev 2009](#2009-maltsev-rs)
 | [Paper](https://doi.org/10.1016/j.bpj.2013.08.024) Yaniv, Stern, Lakatta, Maltsev (2013) Mechanisms of beat-to-beat regulation of cardiac pacemaker cell function by Ca cycling dynamics
 
 ## 2014 Asakura HV
-Base: [Grandi 2010](#2010-grandi-hv), CaRU reduction used by [Greenstein 2006](#2006-greenstein-cv)
+Base: [Grandi 2010](#2010-grandi-hv), [Takeuchi 2006](#2006-takeuchi-gv), CaRU reduction used by [Greenstein 2006](#2006-greenstein-cv)
 | [Original Visual Basic code](http://www.eheartsim.com/?wpdmdl=244)
 | [Paper](https://doi.org/10.1016/j.pbiomolbio.2014.08.008) Asakura, Cha et al., Noma (2014) EAD and DAD mechanisms analyzed by developing a new human ventricular cell model
 
@@ -1157,6 +1172,7 @@ Modifications:
 - INa and INaL: mode-switching causes fixed fractions INa and INaL "mode"
 - IK1 from Ishihara & Yan 2007 and Yan & Ishihara 2005
 - ...
+- No chloride (except in non-specific background current IbNSC)
 
 ## 2014 Bondarenko MV
 Base: [Bondarenko 2004](#2004-bondarenko-mv)
@@ -1488,7 +1504,7 @@ Base: [Passini 2016](#2016-passini-hv)
 ## 2020 Sutanto CV
 Base: [Heijman 2011](#2011-heijman-cv)
 | [Original Myokit code](https://github.com/JordiHeijman/ChloroquineBARSEffect)
-| [Paper](https://doi.org/10.3389/fphys.2020.587709) Sutanto, Heijman (2020) Beta-Adrenergic Receptor Stimulation Limits the Cellular Proarrhythmic Effects of Chloroquine and Azithromycin
+| [Paper](https://doi.org/10.3389/fphys.2020.587709) Sutanto, Heijman (2020) Beta-Adrenergic Receptor Stimulation Modulates the Cellular Proarrhythmic Effects of Chloroquine and Azithromycin
 
 ## 2020 Tomek HV
 Base: [Tomek 2019](#2019-tomek-hv)
@@ -1563,6 +1579,11 @@ Base: [O'Hara 2011](#2011-ohara-hv) and [Tomek 2020](#2020-tomek-hv)
 Modifications:
 - Added Land contraction model to O'Hara and Tomek, partially recalibrated and compared.
 
+## 2021 Morotti MS
+Base: [Kharche 2011](#2011-kharche-ms)
+| [Original Matlab code](https://github.com/drgrandilab/Morotti-et-al-2021-mouse-sinoatrial-model)
+| [Paper](https://doi.org/10.3390/ijms22115645) Morotti, Ni et al., Grandi (2021) Intracellular Na+ Modulates Pacemaking Activity in Murine Sinoatrial Node Myocytes: An In Silico Analysis
+
 ## 2021 Morotti HV
 Base: [Grandi 2010](#2010-grandi-hv)
 | [Original Matlab code](https://github.com/drgrandilab/Morotti-et-al-2021-Cross-species-translators-of-electrophysiological-response)
@@ -1570,11 +1591,7 @@ Base: [Grandi 2010](#2010-grandi-hv)
 
 Modifications:
 - Included (and adapted) PKA and CaMKII signaling from Soltis-Saucerman
-
-## 2021 Morotti MS
-Base: [Kharche 2011](#2011-kharche-ms)
-| [Original Matlab code](https://github.com/drgrandilab/Morotti-et-al-2021-mouse-sinoatrial-model)
-| [Paper](https://doi.org/10.3390/ijms22115645) Morotti, Ni et al., Grandi (2021) Intracellular Na+ Modulates Pacemaking Activity in Murine Sinoatrial Node Myocytes: An In Silico Analysis
+- Replaced IKs
 
 ## 2021 Morotti MV
 Base: [Surdo 2017](#2017-surdo-mv) 
